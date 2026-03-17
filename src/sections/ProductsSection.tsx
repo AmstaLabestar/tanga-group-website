@@ -11,9 +11,9 @@ export default function ProductsSection() {
   return (
     <SectionWrapper id="products">
       <SectionTitle
-        overline="Our Products"
-        title="Technology Built for Scale"
-        subtitle="From edge devices to cloud platforms, our product suite covers the entire data pipeline."
+        overline="Nos produits"
+        title="Une technologie pensée pour l'échelle"
+        subtitle="Des appareils edge aux plateformes cloud, notre suite couvre toute la chaîne de la donnée."
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {products.map((product, index) => (
@@ -52,7 +52,7 @@ export default function ProductsSection() {
               href="/products"
               className="inline-flex items-center gap-2 text-sm font-semibold text-cyan hover:text-foreground transition-colors"
             >
-              Learn More <ArrowRight className="w-4 h-4" />
+              En savoir plus <ArrowRight className="w-4 h-4" />
             </Link>
           </AnimatedCard>
         ))}

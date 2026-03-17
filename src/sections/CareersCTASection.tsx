@@ -18,18 +18,18 @@ export default function CareersCTASection() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan bg-cyan/10 rounded-full mb-4">
-                  We&apos;re Hiring
+                  Nous recrutons
                 </span>
                 <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-                  Build the Future{" "}
-                  <span className="text-gradient">With Us</span>
+                  Construisez l&apos;avenir{" "}
+                  <span className="text-gradient">avec nous</span>
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Join a team of engineers, designers, and innovators who are
-                  building Africa&apos;s most advanced technology platforms. Remote
-                  and on-site positions available.
+                  Rejoignez une équipe d&apos;ingénieurs, de designers et d&apos;innovateurs
+                  qui construisent des plateformes technologiques de pointe en Afrique.
+                  Postes à distance et sur site disponibles.
                 </p>
-                <CTAButton href="/careers">View Open Positions</CTAButton>
+                <CTAButton href="/careers">Voir les postes ouverts</CTAButton>
               </div>
 
               <div className="space-y-3">

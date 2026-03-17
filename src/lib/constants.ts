@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "TANGA GROUP",
   description:
-    "Engineering Africa's Next Generation of Technology. We design embedded systems, IoT solutions and digital platforms.",
+    "L'ingénierie de la prochaine génération technologique en Afrique. Nous concevons des systèmes embarqués, des solutions IoT et des plateformes numériques.",
   url: "https://tangagroup.com",
   ogImage: "/og-image.png",
   links: {
@@ -12,41 +12,41 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { label: "Home", href: "/" },
+  { label: "Accueil", href: "/" },
   { label: "Solutions", href: "/solutions" },
-  { label: "Products", href: "/products" },
-  { label: "Technology", href: "/technology" },
-  { label: "Projects", href: "/projects" },
+  { label: "Produits", href: "/products" },
+  { label: "Technologie", href: "/technology" },
+  { label: "Projets", href: "/projects" },
   { label: "Innovation", href: "/innovation" },
-  { label: "Insights", href: "/insights" },
-  { label: "About", href: "/about" },
-  { label: "Careers", href: "/careers" },
+  { label: "Actualités", href: "/insights" },
+  { label: "À propos", href: "/about" },
+  { label: "Carrières", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const expertise = [
   {
-    title: "Embedded Systems",
+    title: "Systèmes embarqués",
     description:
-      "Custom hardware and firmware solutions for industrial monitoring, automation, and precision control applications.",
+      "Solutions matérielles et firmware sur mesure pour le monitoring industriel, l'automatisation et le contrôle de précision.",
     icon: "Cpu",
   },
   {
-    title: "Internet of Things",
+    title: "Internet des objets",
     description:
-      "End-to-end IoT ecosystems connecting devices, sensors, and cloud platforms for real-time data collection and analysis.",
+      "Des écosystèmes IoT de bout en bout reliant appareils, capteurs et cloud pour collecter et analyser les données en temps réel.",
     icon: "Wifi",
   },
   {
-    title: "Digital Platforms",
+    title: "Plateformes numériques",
     description:
-      "Scalable web and mobile platforms with advanced dashboards, analytics, and decision-support systems.",
+      "Des plateformes web et mobiles scalables avec tableaux de bord, analytics avancées et outils d'aide à la décision.",
     icon: "Monitor",
   },
   {
-    title: "Custom Development",
+    title: "Développement sur mesure",
     description:
-      "Tailored technology solutions designed to solve unique challenges across energy, agriculture, and smart cities.",
+      "Des solutions technologiques adaptées pour relever des défis spécifiques dans l'énergie, l'agriculture et les villes intelligentes.",
     icon: "Code2",
   },
 ];
@@ -54,132 +54,132 @@ export const expertise = [
 export const products = [
   {
     name: "TangaNode",
-    tagline: "Industrial IoT Gateway",
+    tagline: "Passerelle IoT industrielle",
     description:
-      "A ruggedized edge computing device for harsh environments. Collects sensor data, runs local analytics, and syncs to the cloud.",
-    features: ["Multi-protocol support", "Edge AI ready", "IP67 rated"],
+      "Un appareil edge renforcé pour les environnements exigeants. Il collecte les données capteurs, exécute des analyses locales et synchronise avec le cloud.",
+    features: ["Support multi-protocoles", "Prêt pour l'IA en edge", "Indice IP67"],
   },
   {
     name: "TangaCloud",
-    tagline: "Data Intelligence Platform",
+    tagline: "Plateforme d'intelligence data",
     description:
-      "A cloud-native platform for aggregating, visualizing, and acting on IoT data streams from distributed deployments.",
-    features: ["Real-time dashboards", "Anomaly detection", "API-first"],
+      "Une plateforme cloud-native pour agréger, visualiser et exploiter des flux de données IoT issus de déploiements distribués.",
+    features: ["Tableaux de bord temps réel", "Détection d'anomalies", "API-first"],
   },
   {
     name: "TangaConnect",
-    tagline: "Connectivity Management",
+    tagline: "Gestion de la connectivité",
     description:
-      "A connectivity layer supporting LoRa, NB-IoT, and satellite links, ensuring reliable data transmission in any environment.",
-    features: ["Multi-network failover", "Low power", "Global coverage"],
+      "Une couche connectivité supportant LoRa, NB-IoT et satellite, pour une transmission fiable dans tous les environnements.",
+    features: ["Bascule multi-réseaux", "Faible consommation", "Couverture globale"],
   },
 ];
 
 export const deployments = [
   {
-    title: "Smart Agriculture Monitoring",
+    title: "Suivi agricole intelligent",
     location: "Cameroon",
-    metric: "2,400+ sensors deployed",
-    description: "Real-time soil moisture and climate monitoring across farms.",
+    metric: "2 400+ capteurs déployés",
+    description: "Suivi en temps réel de l'humidité du sol et du climat sur des exploitations agricoles.",
   },
   {
-    title: "Urban Water Management",
+    title: "Gestion urbaine de l'eau",
     location: "Senegal",
-    metric: "98.5% uptime",
-    description: "IoT-enabled water distribution monitoring for 5 cities.",
+    metric: "98,5 % de disponibilité",
+    description: "Monitoring de la distribution d'eau pour 5 villes, piloté par IoT.",
   },
   {
-    title: "Solar Farm Analytics",
+    title: "Analytique de ferme solaire",
     location: "Kenya",
-    metric: "15MW monitored",
+    metric: "15 MW monitorés",
     description:
-      "Performance optimization of solar installations using edge AI.",
+      "Optimisation des performances des installations solaires grâce à l'IA en edge.",
   },
   {
-    title: "Fleet Tracking System",
+    title: "Système de suivi de flotte",
     location: "Nigeria",
-    metric: "1,200 vehicles tracked",
-    description: "Real-time GPS and telemetry for logistics companies.",
+    metric: "1 200 véhicules suivis",
+    description: "GPS et télémétrie en temps réel pour des entreprises de logistique.",
   },
 ];
 
 export const techPipeline = [
   {
-    step: "Device",
-    label: "Sensors & Embedded",
-    description: "Custom hardware collects real-world data",
+    step: "Appareil",
+    label: "Capteurs & embarqué",
+    description: "Du matériel sur mesure collecte les données terrain",
     icon: "Cpu",
   },
   {
-    step: "Connectivity",
-    label: "Network Layer",
+    step: "Connectivité",
+    label: "Couche réseau",
     description: "LoRa, NB-IoT, Satellite, WiFi",
     icon: "Radio",
   },
   {
     step: "Cloud",
-    label: "Data Processing",
-    description: "Ingest, store, transform, analyze",
+    label: "Traitement des données",
+    description: "Ingestion, stockage, transformation, analyse",
     icon: "Cloud",
   },
   {
-    step: "Dashboard",
-    label: "Visualization",
-    description: "Real-time insights and reporting",
+    step: "Tableau de bord",
+    label: "Visualisation",
+    description: "Insights et reporting en temps réel",
     icon: "BarChart3",
   },
   {
-    step: "Decision",
-    label: "Actionable Intelligence",
-    description: "Automated alerts and AI-driven decisions",
+    step: "Décision",
+    label: "Intelligence actionnable",
+    description: "Alertes automatisées et décisions guidées par l'IA",
     icon: "Brain",
   },
 ];
 
 export const blogPosts = [
   {
-    title: "Why Africa Needs Homegrown IoT Solutions",
+    title: "Pourquoi l'Afrique a besoin de solutions IoT locales",
     excerpt:
-      "The unique challenges facing African industries demand technology built with local context in mind.",
+      "Les défis spécifiques des industries africaines nécessitent une technologie pensée avec le contexte local.",
     date: "2026-03-10",
-    readTime: "5 min read",
+    readTime: "5 min de lecture",
     category: "IoT",
   },
   {
-    title: "Edge Computing in Harsh Environments",
+    title: "Edge computing en environnements difficiles",
     excerpt:
-      "How we designed TangaNode to survive extreme temperatures, dust, and humidity.",
+      "Comment nous avons conçu TangaNode pour résister aux températures extrêmes, à la poussière et à l'humidité.",
     date: "2026-03-05",
-    readTime: "7 min read",
-    category: "Engineering",
+    readTime: "7 min de lecture",
+    category: "Ingénierie",
   },
   {
-    title: "Building Scalable Data Pipelines for IoT",
+    title: "Construire des pipelines de données scalables pour l'IoT",
     excerpt:
-      "Lessons learned processing millions of sensor readings per day across our deployments.",
+      "Retours d'expérience sur le traitement de millions de mesures capteurs par jour sur nos déploiements.",
     date: "2026-02-28",
-    readTime: "6 min read",
+    readTime: "6 min de lecture",
     category: "Cloud",
   },
 ];
 
 export const openPositions = [
   {
-    title: "Senior Embedded Engineer",
+    title: "Ingénieur embarqué senior",
     location: "Douala, Cameroon",
-    type: "Full-time",
-    department: "Hardware",
+    type: "Temps plein",
+    department: "Matériel",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Remote",
-    type: "Full-time",
-    department: "Platform",
+    title: "Développeur full-stack",
+    location: "À distance",
+    type: "Temps plein",
+    department: "Plateforme",
   },
   {
-    title: "IoT Solutions Architect",
+    title: "Architecte solutions IoT",
     location: "Nairobi, Kenya",
-    type: "Full-time",
+    type: "Temps plein",
     department: "Solutions",
   },
 ];

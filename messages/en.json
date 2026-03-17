@@ -1,0 +1,38 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "solutions": "Solutions",
+    "products": "Products",
+    "technology": "Technology",
+    "projects": "Projects",
+    "innovation": "Innovation",
+    "insights": "Insights",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "requestDemo": "Request a Demo"
+  },
+  "Hero": {
+    "badge": "Deep-Tech Innovation from Africa",
+    "title1": "Engineering Africa's",
+    "titleHighlight": "Next Generation",
+    "title2": "of Technology",
+    "subtitle": "We design embedded systems, IoT solutions and digital platforms that help organizations collect data and improve decision making.",
+    "exploreSolutions": "Explore Solutions",
+    "stats": {
+      "projects": "Projects Delivered",
+      "devices": "Devices Deployed",
+      "countries": "Countries",
+      "uptime": "System Uptime"
+    }
+  },
+  "Footer": {
+    "description": "Engineering Africa's next generation of technology. We design embedded systems, IoT solutions and digital platforms that drive real-world impact.",
+    "company": "Company",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

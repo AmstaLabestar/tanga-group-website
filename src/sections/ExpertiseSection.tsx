@@ -17,9 +17,9 @@ export default function ExpertiseSection() {
   return (
     <SectionWrapper id="expertise">
       <SectionTitle
-        overline="What We Do"
-        title="Our Expertise"
-        subtitle="We combine deep hardware knowledge with modern software platforms to build complete technology solutions."
+        overline="Ce que nous faisons"
+        title="Notre expertise"
+        subtitle="Nous combinons une solide maîtrise du hardware avec des plateformes logicielles modernes pour livrer des solutions complètes."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {expertise.map((item, index) => (

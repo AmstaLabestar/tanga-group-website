@@ -21,9 +21,9 @@ export default function TechArchitectureSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan/[0.02] to-transparent pointer-events-none" />
 
       <SectionTitle
-        overline="How It Works"
-        title="Technology Architecture"
-        subtitle="Our end-to-end pipeline transforms raw sensor data into actionable intelligence."
+        overline="Comment ça marche"
+        title="Architecture technologique"
+        subtitle="Notre chaîne de bout en bout transforme des données brutes en intelligence actionnable."
       />
 
       {/* Desktop: horizontal pipeline */}

@@ -8,18 +8,18 @@ import { Handshake, TrendingUp, Globe } from "lucide-react";
 const partnerBenefits = [
   {
     icon: <Globe className="w-6 h-6" />,
-    title: "Pan-African Reach",
-    description: "Access growing markets across 8+ African countries.",
+    title: "Portée panafricaine",
+    description: "Accédez à des marchés en croissance dans plus de 8 pays africains.",
   },
   {
     icon: <TrendingUp className="w-6 h-6" />,
-    title: "Scalable Technology",
-    description: "Battle-tested IoT & embedded platforms ready for scale.",
+    title: "Technologie scalable",
+    description: "Des plateformes IoT et embarquées éprouvées, prêtes à changer d'échelle.",
   },
   {
     icon: <Handshake className="w-6 h-6" />,
-    title: "Strategic Partnership",
-    description: "Co-develop solutions for energy, agriculture & smart cities.",
+    title: "Partenariat stratégique",
+    description: "Co-développons des solutions pour l'énergie, l'agriculture et les villes intelligentes.",
   },
 ];
 
@@ -35,21 +35,22 @@ export default function PartnershipCTASection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan bg-cyan/10 rounded-full mb-4">
-                Partner With Us
+                Devenez partenaire
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-                Invest in Africa&apos;s{" "}
-                <span className="text-gradient">Technology Future</span>
+                Investissez dans l&apos;avenir{" "}
+                <span className="text-gradient">technologique</span> de l&apos;Afrique
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Join a growing ecosystem of investors and partners backing
-                deep-tech innovation on the continent. Whether you&apos;re looking to
-                invest, distribute, or co-develop, we&apos;re ready to collaborate.
+                Rejoignez un écosystème d&apos;investisseurs et de partenaires qui
+                soutiennent l&apos;innovation deep-tech sur le continent. Que vous
+                souhaitiez investir, distribuer ou co-développer, nous sommes prêts
+                à collaborer.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <CTAButton href="/innovation">Investor Information</CTAButton>
+                <CTAButton href="/innovation">Infos investisseurs</CTAButton>
                 <CTAButton href="/contact" variant="secondary">
-                  Become a Partner
+                  Devenir partenaire
                 </CTAButton>
               </div>
             </div>

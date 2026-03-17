@@ -11,9 +11,9 @@ export default function InsightsSection() {
   return (
     <SectionWrapper id="insights">
       <SectionTitle
-        overline="Insights"
-        title="Latest from Our Blog"
-        subtitle="Perspectives on technology, innovation, and building for the African market."
+        overline="Actualités"
+        title="Derniers articles"
+        subtitle="Analyses sur la technologie, l'innovation et la construction pour le marché africain."
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {blogPosts.map((post, index) => (
@@ -38,7 +38,7 @@ export default function InsightsSection() {
 
             <div className="flex items-center justify-between">
               <span className="text-xs text-muted-foreground">
-                {new Date(post.date).toLocaleDateString("en-US", {
+                {new Date(post.date).toLocaleDateString("fr-FR", {
                   month: "short",
                   day: "numeric",
                   year: "numeric",
@@ -48,7 +48,7 @@ export default function InsightsSection() {
                 href="/insights"
                 className="inline-flex items-center gap-1 text-sm font-semibold text-cyan hover:text-foreground transition-colors"
               >
-                Read <ArrowRight className="w-3.5 h-3.5" />
+                Lire <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </AnimatedCard>
@@ -60,7 +60,7 @@ export default function InsightsSection() {
           href="/insights"
           className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
         >
-          View All Articles <ArrowRight className="w-4 h-4" />
+          Voir tous les articles <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </SectionWrapper>

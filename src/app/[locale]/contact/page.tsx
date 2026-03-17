@@ -30,13 +30,13 @@ const contactInfo = [
   {
     icon: <Phone className="w-5 h-5" />,
     label: "Téléphone",
-    value: "+226 XX XX XX XX",
-    href: "tel:+226 ",
+    value: "+237 6XX XXX XXX",
+    href: "tel:+237600000000",
   },
   {
     icon: <MapPin className="w-5 h-5" />,
     label: "Bureau",
-    value: "Ouagadougou, Burkina Faso",
+    value: "Douala, Cameroun",
     href: "#",
   },
 ];
@@ -99,7 +99,7 @@ export default function ContactPage() {
               <div className="text-center">
                 <MapPin className="w-8 h-8 text-cyan/30 mx-auto mb-2" />
                 <p className="text-xs text-muted-foreground">
-                  Wemtenga, Ouagadougou, Burkina Faso
+                  Douala, Cameroon
                 </p>
               </div>
             </div>

@@ -4,7 +4,7 @@ import SectionTitle from "@/components/SectionTitle";
 import AnimatedCard from "@/components/AnimatedCard";
 import { blogPosts } from "@/lib/constants";
 import { Clock, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 export const metadata: Metadata = {
   title: "Actualités",

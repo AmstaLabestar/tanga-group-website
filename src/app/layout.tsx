@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} — Engineering Africa's Next Generation of Technology`,
+    default: `${siteConfig.name} — L'ingénierie de la prochaine génération technologique en Afrique`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "fr_FR",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="fr" className="dark">
       <body className="min-h-screen bg-background text-foreground overflow-x-hidden">
         <Header />
         <main className="relative">{children}</main>

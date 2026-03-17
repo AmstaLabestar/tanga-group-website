@@ -38,10 +38,14 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2022", event: "Fondé à Ouagadougou, Burkina Faso" },
-  { year: "2023", event: "" },
-  { year: "2024", event: "Lancement de notre première plateforme IoT" },
-  
+  { year: "2019", event: "Fondé à Douala, Cameroun" },
+  { year: "2020", event: "Premier déploiement IoT — pilote d'agriculture intelligente" },
+  { year: "2021", event: "Lancement de l'appareil edge TangaNode v1" },
+  { year: "2022", event: "Expansion à 3 pays, plus de 20 membres" },
+  { year: "2023", event: "Lancement de TangaCloud, financement série A" },
+  { year: "2024", event: "Plus de 50 déploiements dans 8 pays africains" },
+  { year: "2025", event: "Lancement de TangaConnect, intégration satellite" },
+  { year: "2026", event: "Passage à l'échelle: 15 pays, plus de 45 membres" },
 ];
 
 const team = [

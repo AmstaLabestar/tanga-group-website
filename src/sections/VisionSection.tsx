@@ -17,7 +17,7 @@ export default function VisionSection() {
           transition={{ duration: 0.7 }}
         >
           <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-purple bg-purple/10 rounded-full mb-6">
-            Our Vision
+            Notre vision
           </span>
         </motion.div>
 
@@ -28,12 +28,12 @@ export default function VisionSection() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold leading-snug tracking-tight"
         >
-          &ldquo;We believe the next wave of global technology innovation will
-          come from Africa.{" "}
+          &ldquo;Nous croyons que la prochaine vague d&apos;innovation technologique
+          mondiale viendra d&apos;Afrique.{" "}
           <span className="text-gradient">
-            Our mission is to build the infrastructure
+            Notre mission est de construire l&apos;infrastructure
           </span>{" "}
-          that makes it possible.&rdquo;
+          qui rend cela possible.&rdquo;
         </motion.blockquote>
 
         <motion.p
@@ -43,7 +43,7 @@ export default function VisionSection() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-8 text-muted-foreground text-sm"
         >
-          — TANGA GROUP Leadership
+          — Direction de TANGA GROUP
         </motion.p>
       </div>
     </section>

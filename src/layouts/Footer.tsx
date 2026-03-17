@@ -4,29 +4,29 @@ import { ArrowUpRight } from "lucide-react";
 
 const footerSections = [
   {
-    title: "Company",
+    title: "Entreprise",
     links: [
-      { label: "About", href: "/about" },
-      { label: "Careers", href: "/careers" },
+      { label: "À propos", href: "/about" },
+      { label: "Carrières", href: "/careers" },
       { label: "Contact", href: "/contact" },
-      { label: "Insights", href: "/insights" },
+      { label: "Actualités", href: "/insights" },
     ],
   },
   {
     title: "Solutions",
     links: [
-      { label: "Embedded Systems", href: "/solutions#embedded" },
-      { label: "IoT Solutions", href: "/solutions#iot" },
-      { label: "Digital Platforms", href: "/solutions#platforms" },
-      { label: "Custom Development", href: "/solutions#custom" },
+      { label: "Systèmes embarqués", href: "/solutions#embedded" },
+      { label: "Solutions IoT", href: "/solutions#iot" },
+      { label: "Plateformes numériques", href: "/solutions#platforms" },
+      { label: "Développement sur mesure", href: "/solutions#custom" },
     ],
   },
   {
-    title: "Resources",
+    title: "Ressources",
     links: [
-      { label: "Technology", href: "/technology" },
-      { label: "Products", href: "/products" },
-      { label: "Projects", href: "/projects" },
+      { label: "Technologie", href: "/technology" },
+      { label: "Produits", href: "/products" },
+      { label: "Projets", href: "/projects" },
       { label: "Innovation", href: "/innovation" },
     ],
   },
@@ -49,9 +49,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mb-6">
-              Engineering Africa&apos;s next generation of technology. We design
-              embedded systems, IoT solutions and digital platforms that drive
-              real-world impact.
+              L&apos;ingénierie de la prochaine génération technologique en Afrique.
+              Nous concevons des systèmes embarqués, des solutions IoT et des
+              plateformes numériques à fort impact.
             </p>
             <div className="flex items-center gap-4">
               {Object.entries(siteConfig.links).map(([name, href]) => (
@@ -94,21 +94,20 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="py-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.
           </p>
           <div className="flex items-center gap-6">
             <Link
               href="/privacy"
               className="text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
-              Privacy Policy
+              Politique de confidentialité
             </Link>
             <Link
               href="/terms"
               className="text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
-              Terms of Service
+              Conditions d&apos;utilisation
             </Link>
           </div>
         </div>

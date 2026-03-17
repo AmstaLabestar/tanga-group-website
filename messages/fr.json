@@ -1,0 +1,38 @@
+{
+  "Navigation": {
+    "home": "Accueil",
+    "solutions": "Solutions",
+    "products": "Produits",
+    "technology": "Technologie",
+    "projects": "Projets",
+    "innovation": "Innovation",
+    "insights": "Actualités",
+    "about": "À propos",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "requestDemo": "Demander une démo"
+  },
+  "Hero": {
+    "badge": "L'innovation Deep-Tech depuis l'Afrique",
+    "title1": "L'Ingénierie de la",
+    "titleHighlight": "Prochaine Génération",
+    "title2": "Technologique Africaine",
+    "subtitle": "Nous concevons des systèmes embarqués, des solutions IoT et des plateformes numériques pour aider les entreprises à collecter des données et améliorer leurs décisions.",
+    "exploreSolutions": "Explorer nos solutions",
+    "stats": {
+      "projects": "Projets Livrés",
+      "devices": "Appareils Déployés",
+      "countries": "Pays",
+      "uptime": "Disponibilité Système"
+    }
+  },
+  "Footer": {
+    "description": "L'ingénierie de la prochaine génération technologique en Afrique. Nous concevons des systèmes embarqués, des solutions IoT et des plateformes numériques à fort impact.",
+    "company": "Entreprise",
+    "solutions": "Solutions",
+    "resources": "Ressources",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  }
+}

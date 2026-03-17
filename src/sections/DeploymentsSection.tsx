@@ -11,8 +11,8 @@ export default function DeploymentsSection() {
     <SectionWrapper id="deployments">
       <SectionTitle
         overline="Impact"
-        title="Real-World Deployments"
-        subtitle="Our technology is deployed across the African continent, solving critical infrastructure challenges."
+        title="Déploiements terrain"
+        subtitle="Notre technologie est déployée à travers l'Afrique pour résoudre des défis d'infrastructure critiques."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {deployments.map((deployment, index) => (
