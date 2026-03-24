@@ -1,13 +1,14 @@
 export const siteConfig = {
   name: "TANGA GROUP",
   description:
-    "L'ingénierie de la prochaine génération technologique en Afrique. Nous concevons des systèmes embarqués, des solutions IoT et des plateformes numériques.",
+    "Nous concevons des systèmes intelligents qui transforment les opérations des entreprises africaines. IoT, embarqué, data et plateformes digitales pour connecter le terrain à la décision.",
   url: "https://tangagroup.com",
   ogImage: "/og-image.png",
   links: {
-    twitter: "https://twitter.com/tangagroup",
-    linkedin: "https://linkedin.com/company/tangagroup",
-    github: "https://github.com/tangagroup",
+    facebook: "https://www.facebook.com/Tangagroupbf?mibextid=ZbWKwL",
+    instagram: "https://www.instagram.com/tanga.group",
+    whatsapp: "https://wa.me/22667402030",
+    linkedin: "https://www.linkedin.com/company/tanga-group/posts/?feedView=all",
   },
 };
 
@@ -20,7 +21,6 @@ export const navLinks = [
   { label: "Innovation", href: "/innovation" },
   { label: "Actualités", href: "/insights" },
   { label: "À propos", href: "/about" },
-  { label: "Carrières", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -28,25 +28,25 @@ export const expertise = [
   {
     title: "Systèmes embarqués",
     description:
-      "Solutions matérielles et firmware sur mesure pour le monitoring industriel, l'automatisation et le contrôle de précision.",
+      "Nous concevons des dispositifs intelligents capables de fonctionner dans des environnements exigeants, pour automatiser et sécuriser vos opérations terrain.",
     icon: "Cpu",
   },
   {
     title: "Internet des objets",
     description:
-      "Des écosystèmes IoT de bout en bout reliant appareils, capteurs et cloud pour collecter et analyser les données en temps réel.",
+      "Connectez vos équipements et centralisez vos données en temps réel pour une visibilité totale et un pilotage efficace de vos activités.",
     icon: "Wifi",
   },
   {
     title: "Plateformes numériques",
     description:
-      "Des plateformes web et mobiles scalables avec tableaux de bord, analytics avancées et outils d'aide à la décision.",
+      "Des applications web et mobiles conçues pour transformer vos données en décisions concrètes grâce à des tableaux de bord clairs et exploitables.",
     icon: "Monitor",
   },
   {
     title: "Développement sur mesure",
     description:
-      "Des solutions technologiques adaptées pour relever des défis spécifiques dans l'énergie, l'agriculture et les villes intelligentes.",
+      "Nous développons des solutions adaptées à vos réalités terrain, pour répondre précisément à vos enjeux métier et accélérer votre croissance.",
     icon: "Code2",
   },
 ];
@@ -54,132 +54,115 @@ export const expertise = [
 export const products = [
   {
     name: "TangaNode",
-    tagline: "Passerelle IoT industrielle",
+    tagline: "Le cerveau de vos opérations terrain",
     description:
-      "Un appareil edge renforcé pour les environnements exigeants. Il collecte les données capteurs, exécute des analyses locales et synchronise avec le cloud.",
-    features: ["Support multi-protocoles", "Prêt pour l'IA en edge", "Indice IP67"],
+      "Une passerelle IoT industrielle conçue pour collecter, traiter et transmettre vos données, même dans les environnements les plus exigeants.",
+    features: [
+      "Support multi-protocoles",
+      "Traitement local intelligent (edge computing)",
+      "Résistant aux environnements extrêmes (IP67)",
+    ],
   },
   {
     name: "TangaCloud",
-    tagline: "Plateforme d'intelligence data",
+    tagline: "Transformez vos données en décisions",
     description:
-      "Une plateforme cloud-native pour agréger, visualiser et exploiter des flux de données IoT issus de déploiements distribués.",
-    features: ["Tableaux de bord temps réel", "Détection d'anomalies", "API-first"],
+      "Une plateforme cloud qui centralise vos données IoT et vous offre des insights exploitables en temps réel.",
+    features: [
+      "Tableaux de bord temps réel",
+      "Détection d’anomalies",
+      "API ouverte pour intégrations",
+    ],
   },
   {
     name: "TangaConnect",
-    tagline: "Gestion de la connectivité",
+    tagline: "Une connectivité fiable, partout",
     description:
-      "Une couche connectivité supportant LoRa, NB-IoT et satellite, pour une transmission fiable dans tous les environnements.",
-    features: ["Bascule multi-réseaux", "Faible consommation", "Couverture globale"],
+      "Une infrastructure réseau intelligente pour garantir la transmission continue de vos données, même dans les zones les plus reculées.",
+    features: [
+      "Multi-réseaux (LoRa, NB-IoT, Satellite)",
+      "Optimisation énergétique",
+      "Couverture étendue",
+    ],
   },
 ];
 
 export const deployments = [
   {
-    title: "Suivi agricole intelligent",
-    location: "Cameroon",
-    metric: "2 400+ capteurs déployés",
-    description: "Suivi en temps réel de l'humidité du sol et du climat sur des exploitations agricoles.",
-  },
-  {
-    title: "Gestion urbaine de l'eau",
-    location: "Senegal",
-    metric: "98,5 % de disponibilité",
-    description: "Monitoring de la distribution d'eau pour 5 villes, piloté par IoT.",
-  },
-  {
-    title: "Analytique de ferme solaire",
-    location: "Kenya",
-    metric: "15 MW monitorés",
+    title: "Gestion intelligente de la présence scolaire",
+    location: "Burkina Faso",
+    metric: "+10 établissements",
     description:
-      "Optimisation des performances des installations solaires grâce à l'IA en edge.",
+      "Digitalisation du suivi de présence des élèves pour améliorer la gestion administrative et la transparence.",
   },
   {
-    title: "Système de suivi de flotte",
-    location: "Nigeria",
-    metric: "1 200 véhicules suivis",
-    description: "GPS et télémétrie en temps réel pour des entreprises de logistique.",
+    title: "Contrôle d’accès sécurisé par badge",
+    location: "Ouagadougou, Bobo-Dioulasso",
+    metric: "+20 entreprises",
+    description:
+      "Sécurisation des accès physiques grâce à des systèmes de contrôle par badge fiables et centralisés.",
+  },
+  {
+    title: "Pointage biométrique",
+    location: "Burkina Faso, Guinée",
+    metric: "+30 entreprises",
+    description:
+      "Automatisation du suivi des présences du personnel avec authentification biométrique.",
+  },
+  {
+    title: "Pointage RFID par badge",
+    location: "Ouagadougou",
+    metric: "+20 entreprises",
+    description:
+      "Système de pointage rapide et fiable basé sur la technologie RFID pour le suivi des employés.",
+  },
+  {
+    title: "Collecte d’avis clients",
+    location: "Burkina Faso, Guinée",
+    metric: "+15 entreprises",
+    description:
+      "Solution de feedback client en temps réel pour améliorer l’expérience et la qualité de service.",
   },
 ];
 
 export const techPipeline = [
   {
-    step: "Appareil",
-    label: "Capteurs & embarqué",
-    description: "Du matériel sur mesure collecte les données terrain",
+    step: "Collecte",
+    label: "Capteurs & systèmes embarqués",
+    description:
+      "Des dispositifs intelligents capturent les données directement sur le terrain.",
     icon: "Cpu",
   },
   {
-    step: "Connectivité",
-    label: "Couche réseau",
-    description: "LoRa, NB-IoT, Satellite, WiFi",
+    step: "Transmission",
+    label: "Connectivité intelligente",
+    description:
+      "Les données sont transmises de manière fiable via des réseaux adaptés à chaque environnement.",
     icon: "Radio",
   },
   {
-    step: "Cloud",
-    label: "Traitement des données",
-    description: "Ingestion, stockage, transformation, analyse",
+    step: "Traitement",
+    label: "Infrastructure cloud",
+    description:
+      "Les données sont stockées, traitées et analysées à grande échelle.",
     icon: "Cloud",
   },
   {
-    step: "Tableau de bord",
-    label: "Visualisation",
-    description: "Insights et reporting en temps réel",
+    step: "Visualisation",
+    label: "Tableaux de bord",
+    description:
+      "Des interfaces claires pour suivre vos opérations en temps réel.",
     icon: "BarChart3",
   },
   {
     step: "Décision",
-    label: "Intelligence actionnable",
-    description: "Alertes automatisées et décisions guidées par l'IA",
+    label: "Intelligence opérationnelle",
+    description:
+      "Des insights exploitables pour prendre des décisions rapides et efficaces.",
     icon: "Brain",
   },
 ];
 
-export const blogPosts = [
-  {
-    title: "Pourquoi l'Afrique a besoin de solutions IoT locales",
-    excerpt:
-      "Les défis spécifiques des industries africaines nécessitent une technologie pensée avec le contexte local.",
-    date: "2026-03-10",
-    readTime: "5 min de lecture",
-    category: "IoT",
-  },
-  {
-    title: "Edge computing en environnements difficiles",
-    excerpt:
-      "Comment nous avons conçu TangaNode pour résister aux températures extrêmes, à la poussière et à l'humidité.",
-    date: "2026-03-05",
-    readTime: "7 min de lecture",
-    category: "Ingénierie",
-  },
-  {
-    title: "Construire des pipelines de données scalables pour l'IoT",
-    excerpt:
-      "Retours d'expérience sur le traitement de millions de mesures capteurs par jour sur nos déploiements.",
-    date: "2026-02-28",
-    readTime: "6 min de lecture",
-    category: "Cloud",
-  },
-];
+export const blogPosts = [];
 
-export const openPositions = [
-  {
-    title: "Ingénieur embarqué senior",
-    location: "Douala, Cameroon",
-    type: "Temps plein",
-    department: "Matériel",
-  },
-  {
-    title: "Développeur full-stack",
-    location: "À distance",
-    type: "Temps plein",
-    department: "Plateforme",
-  },
-  {
-    title: "Architecte solutions IoT",
-    location: "Nairobi, Kenya",
-    type: "Temps plein",
-    department: "Solutions",
-  },
-];
+export const openPositions = [];

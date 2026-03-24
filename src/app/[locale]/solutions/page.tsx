@@ -3,69 +3,69 @@ import SectionWrapper from "@/components/SectionWrapper";
 import SectionTitle from "@/components/SectionTitle";
 import AnimatedCard from "@/components/AnimatedCard";
 import CTAButton from "@/components/CTAButton";
-import { Cpu, Wifi, Monitor, Code2, CheckCircle2 } from "lucide-react";
+import { Cpu, Wifi, Monitor, Sparkles, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Solutions",
   description:
-    "Des solutions deep-tech en systèmes embarqués, IoT, plateformes numériques et développement sur mesure. Conçues pour l'Afrique, prêtes pour le monde.",
+    "Des solutions technologiques pour digitaliser les organisations: IoT, électronique embarquée, systèmes de pointage et plateformes numériques.",
 };
 
 const solutions = [
   {
-    icon: <Cpu className="w-8 h-8" />,
-    title: "Systèmes embarqués",
-    id: "embedded",
+    icon: <Monitor className="w-8 h-8" />,
+    title: "Digitalisation des organisations",
+    id: "digitalisation",
     description:
-      "Conception matérielle et firmware sur mesure pour le monitoring industriel, l'agriculture de précision et l'automatisation.",
+      "Automatisez vos processus, améliorez la gestion interne et gagnez en efficacité opérationnelle grâce à des outils numériques conçus sur mesure.",
     capabilities: [
-      "Conception et prototypage PCB",
-      "Développement firmware (C/C++, Rust)",
-      "Intégration et calibration des capteurs",
-      "Optimisation basse consommation",
-      "Conformité et certification matérielle",
+      "Audit et cadrage des besoins",
+      "Applications web et tableaux de bord",
+      "Outils de gestion et de reporting",
+      "Intégrations et automatisations",
+      "Accompagnement au déploiement",
     ],
   },
   {
     icon: <Wifi className="w-8 h-8" />,
-    title: "Solutions IoT",
+    title: "Internet des objets (IoT)",
     id: "iot",
     description:
-      "Des écosystèmes IoT de bout en bout reliant les appareils physiques au cloud, avec une connectivité fiable dans tous les environnements.",
+      "Concevez des objets connectés capables de collecter et transmettre des données en temps réel pour faciliter la prise de décision.",
     capabilities: [
-      "Connectivité LoRa, NB-IoT, satellite",
-      "Edge computing et passerelles",
-      "Provisioning et gestion des appareils",
-      "Mises à jour firmware OTA",
-      "Tableaux de bord de suivi de flotte",
+      "Capteurs, passerelles et collecte terrain",
+      "Connectivité et transmission sécurisée",
+      "Plateforme de supervision en temps réel",
+      "Alertes, indicateurs et historiques",
+      "Maintenance et évolutions",
     ],
   },
   {
-    icon: <Monitor className="w-8 h-8" />,
-    title: "Plateformes numériques",
-    id: "platforms",
+    icon: <Cpu className="w-8 h-8" />,
+    title: "Solutions électroniques intelligentes",
+    id: "electronique",
     description:
-      "Des plateformes web et mobiles scalables avec analytics avancées, tableaux de bord temps réel et outils d'aide à la décision.",
+      "Développement de systèmes électroniques innovants pour améliorer l&apos;expérience utilisateur et l&apos;efficacité des services.",
     capabilities: [
-      "Visualisation de données en temps réel",
-      "APIs REST et GraphQL",
-      "Contrôle d'accès par rôles",
-      "Reporting et alertes automatisés",
-      "Design responsive mobile-first",
+      "Conception de cartes et PCB",
+      "Prototypage et tests",
+      "Intégration capteurs et périphériques",
+      "Firmware et communication",
+      "Industrialisation et documentation",
     ],
   },
   {
-    icon: <Code2 className="w-8 h-8" />,
-    title: "Développement sur mesure",
-    id: "custom",
+    icon: <Sparkles className="w-8 h-8" />,
+    title: "Transformation numérique",
+    id: "transformation",
     description:
-      "Développement technologique adapté aux organisations ayant des besoins spécifiques dans l'énergie, la logistique, la santé et les smart cities.",
+      "Accompagnement des entreprises et institutions dans l&apos;adoption de technologies modernes pour moderniser leurs activités.",
     capabilities: [
-      "Conseil et audit technologiques",
-      "Conception d'architecture système",
-      "Développement et validation de MVP",
-      "Modernisation de systèmes existants",
-      "Intégration et développement d'API",
+      "Stratégie et feuille de route",
+      "MVP, itérations et validation",
+      "Formation et conduite du changement",
+      "Sécurité, conformité et bonnes pratiques",
+      "Support et amélioration continue",
     ],
   },
 ];
@@ -77,8 +77,8 @@ export default function SolutionsPage() {
       <SectionWrapper>
         <SectionTitle
           overline="Solutions"
-          title="Une technologie à fort impact"
-          subtitle="Nous combinons une expertise hardware approfondie et une ingénierie logicielle moderne pour livrer des solutions complètes aux défis les plus urgents."
+          title="Des solutions conçues pour le terrain"
+          subtitle="Notre approche: partir d&apos;un besoin concret, concevoir une solution adaptée, puis accompagner le déploiement et l&apos;adoption."
         />
       </SectionWrapper>
 
@@ -100,7 +100,7 @@ export default function SolutionsPage() {
                     {solution.description}
                   </p>
                   <CTAButton href="/contact" variant="secondary">
-                    Discuter de votre projet
+                    Discuter de votre besoin
                   </CTAButton>
                 </div>
 

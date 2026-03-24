@@ -3,7 +3,14 @@ import SectionWrapper from "@/components/SectionWrapper";
 import SectionTitle from "@/components/SectionTitle";
 import AnimatedCard from "@/components/AnimatedCard";
 import CTAButton from "@/components/CTAButton";
-import { TrendingUp, Users, Globe, Target, DollarSign, Lightbulb } from "lucide-react";
+import {
+  TrendingUp,
+  Users,
+  Globe,
+  Target,
+  DollarSign,
+  Lightbulb,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Innovation & investisseurs",
@@ -13,9 +20,13 @@ export const metadata: Metadata = {
 
 const metrics = [
   { label: "Croissance CA", value: "3,5x", sublabel: "Année sur année" },
-  { label: "Taille de marché", value: "$15B", sublabel: "Adressable d'ici 2030" },
-  { label: "Déploiements", value: "50+", sublabel: "Dans 8 pays" },
-  { label: "Équipe", value: "45+", sublabel: "Ingénieurs & spécialistes" },
+  {
+    label: "Taille de marché",
+    value: "30-90M USD",
+    sublabel: "Adressable d'ici 2030",
+  },
+  { label: "Déploiements", value: "95+", sublabel: "Dans 3 pays" },
+  { label: "Équipe", value: "10+", sublabel: "Ingénieurs & spécialistes" },
 ];
 
 const partnershipTiers = [
@@ -44,7 +55,8 @@ const partnershipTiers = [
   {
     tier: "Investisseur stratégique",
     icon: <DollarSign className="w-8 h-8" />,
-    description: "Investissez dans la prochaine vague d'innovation deep-tech africaine.",
+    description:
+      "Investissez dans la prochaine vague d'innovation deep-tech africaine.",
     benefits: [
       "Opportunité d'advisory board",
       "Mises à jour trimestrielles",
@@ -58,17 +70,20 @@ const reasons = [
   {
     icon: <TrendingUp className="w-6 h-6" />,
     title: "Marché en forte croissance",
-    description: "Le marché IoT africain croît à 25 % de CAGR, au-dessus des moyennes mondiales.",
+    description:
+      "Le marché IoT africain croît à 25 % de CAGR, au-dessus des moyennes mondiales.",
   },
   {
     icon: <Target className="w-6 h-6" />,
     title: "Avantage du premier entrant",
-    description: "Nous construisons le standard des déploiements IoT industriels à l'échelle du continent.",
+    description:
+      "Nous construisons le standard des déploiements IoT industriels à l'échelle du continent.",
   },
   {
     icon: <Users className="w-6 h-6" />,
     title: "Équipe de classe mondiale",
-    description: "Des ingénieurs ayant de l'expérience dans des entreprises technologiques de premier plan.",
+    description:
+      "Des ingénieurs ayant de l'expérience dans des entreprises technologiques de premier plan.",
   },
 ];
 
@@ -83,8 +98,7 @@ export default function InnovationPage() {
         />
       </SectionWrapper>
 
-      {/* Metrics */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div className="mb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="glass rounded-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
           {metrics.map((metric) => (
             <div key={metric.label} className="text-center">
@@ -100,7 +114,6 @@ export default function InnovationPage() {
         </div>
       </div>
 
-      {/* Why Invest */}
       <SectionWrapper>
         <SectionTitle
           overline="Pourquoi nous"
@@ -123,7 +136,6 @@ export default function InnovationPage() {
         </div>
       </SectionWrapper>
 
-      {/* Partnership Tiers */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h3 className="font-heading text-2xl font-bold text-center mb-10">
           Programmes de partenariat

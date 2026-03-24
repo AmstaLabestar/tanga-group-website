@@ -3,12 +3,12 @@ import SectionWrapper from "@/components/SectionWrapper";
 import SectionTitle from "@/components/SectionTitle";
 import AnimatedCard from "@/components/AnimatedCard";
 import { techPipeline } from "@/lib/constants";
-import { Cpu, Radio, Cloud, BarChart3, Brain, Layers, Server, Lock } from "lucide-react";
+import { Cpu, Radio, Cloud, BarChart3, Brain, Server, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Technologie",
   description:
-    "Découvrez la stack technologique de TANGA GROUP: firmware embarqué, protocoles de connectivité, infrastructure cloud et analytics assistées par IA.",
+    "Les technologies maîtrisées par TANGA GROUP: électronique embarquée, IoT, plateformes cloud, analyse de données et solutions intégrées.",
 };
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -21,69 +21,58 @@ const iconMap: Record<string, React.ReactNode> = {
 
 const techStack = [
   {
-    category: "Embarqué & matériel",
+    category: "Électronique embarquée",
     icon: <Cpu className="w-6 h-6" />,
     technologies: [
-      "ARM Cortex M4/M7",
-      "STM32, ESP32, nRF52",
-      "FreeRTOS, Zephyr",
-      "C/C++, Rust",
-      "KiCad & Altium PCB design",
+      "Conception de circuits et cartes PCB",
+      "Intégration capteurs et périphériques",
+      "Prototypage, tests et validation",
+      "Firmware et communication",
+      "Industrialisation produit",
     ],
   },
   {
-    category: "Connectivité",
+    category: "Internet des objets (IoT)",
     icon: <Radio className="w-6 h-6" />,
     technologies: [
-      "LoRaWAN (The Things Network)",
-      "NB-IoT / LTE-M",
-      "WiFi / BLE 5.0",
-      "MQTT / CoAP protocols",
-      "Satellite (Iridium)",
+      "Collecte et transmission temps réel",
+      "Objets connectés et passerelles",
+      "Supervision et alertes",
+      "Sécurisation des échanges",
+      "Maintenance et évolutivité",
     ],
   },
   {
-    category: "Cloud & backend",
+    category: "Plateformes cloud",
     icon: <Server className="w-6 h-6" />,
     technologies: [
-      "Kubernetes / Docker",
-      "Node.js / Python / Go",
-      "TimescaleDB / PostgreSQL",
-      "Apache Kafka",
-      "AWS / GCP infrastructure",
+      "Applications web et outils de gestion",
+      "Centralisation et analyse des données",
+      "Tableaux de bord et reporting",
+      "Accès, rôles et traçabilité",
+      "APIs et intégrations",
     ],
   },
   {
-    category: "Plateforme & frontend",
-    icon: <Layers className="w-6 h-6" />,
-    technologies: [
-      "React / Next.js",
-      "React Native",
-      "D3.js / Recharts",
-      "GraphQL / REST APIs",
-      "WebSocket real-time",
-    ],
-  },
-  {
-    category: "IA & analytics",
+    category: "Analyse de données",
     icon: <Brain className="w-6 h-6" />,
     technologies: [
-      "TensorFlow Lite (edge)",
-      "Anomaly detection models",
-      "Predictive maintenance",
-      "Computer vision",
-      "Time-series forecasting",
+      "Exploitation et visualisation",
+      "Indicateurs et tendances",
+      "Aide à la décision",
+      "Qualité et fiabilité des données",
+      "Rapports et alertes",
     ],
   },
   {
-    category: "Sécurité",
-    icon: <Lock className="w-6 h-6" />,
+    category: "Solutions intégrées",
+    icon: <Sparkles className="w-6 h-6" />,
     technologies: [
-      "AES-256 encryption",
-      "TLS 1.3 mutual auth",
-      "Hardware security modules",
-      "Secure boot chain",
-      "GDPR-compliant data handling",
+      "Hardware + software + UX",
+      "Approche orientée usage",
+      "Déploiement et adoption",
+      "Documentation et formation",
+      "Support et amélioration continue",
     ],
   },
 ];
@@ -94,8 +83,8 @@ export default function TechnologyPage() {
       <SectionWrapper>
         <SectionTitle
           overline="Technologie"
-          title="Notre stack technologique"
-          subtitle="Du firmware bas niveau aux analytics pilotées par IA, nous maîtrisons chaque couche."
+          title="Une expertise complète, du hardware au logiciel"
+          subtitle="L&apos;innovation chez TANGA GROUP repose sur la maîtrise de technologies complémentaires pour livrer des solutions fiables et performantes."
         />
       </SectionWrapper>
 
@@ -120,7 +109,7 @@ export default function TechnologyPage() {
       {/* Tech stack grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h3 className="font-heading text-xl font-bold text-center mb-10">
-          Technologies que nous utilisons
+          Nos piliers technologiques
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {techStack.map((group, index) => (

@@ -3,47 +3,64 @@ import SectionWrapper from "@/components/SectionWrapper";
 import SectionTitle from "@/components/SectionTitle";
 import AnimatedCard from "@/components/AnimatedCard";
 import CTAButton from "@/components/CTAButton";
-import { products } from "@/lib/constants";
-import { CheckCircle2, Zap, Shield, Globe } from "lucide-react";
+import { CheckCircle2, MessageSquare, Fingerprint, CreditCard, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Produits",
   description:
-    "Découvrez la suite produits de TANGA GROUP: passerelle IoT TangaNode, plateforme data TangaCloud et gestion de connectivité TangaConnect.",
+    "Les produits TANGA GROUP: Feelback, solutions de pointage biométrique et RFID, et solutions technologiques sur mesure.",
 };
 
 const productDetails = [
   {
-    ...products[0],
-    icon: <Zap className="w-10 h-10" />,
-    specs: [
-      { label: "Processeur", value: "ARM Cortex-M4 / M7" },
-      { label: "Connectivité", value: "LoRa, WiFi, BLE, Ethernet" },
-      { label: "Stockage", value: "SD industrielle 32 Go" },
-      { label: "Alimentation", value: "Solaire + batterie de secours" },
-      { label: "Protection", value: "IP67 poussière et étanche" },
+    name: "Feelback",
+    tagline: "Mesure instantanée de satisfaction client",
+    icon: <MessageSquare className="w-10 h-10" />,
+    description:
+      "Une solution électronique innovante permettant aux entreprises de collecter instantanément les avis de leurs clients via un boîtier simple à boutons de satisfaction.",
+    points: [
+      "Analyser la satisfaction en temps réel",
+      "Identifier rapidement les points d'amélioration",
+      "Améliorer la qualité des services",
     ],
   },
   {
-    ...products[1],
-    icon: <Globe className="w-10 h-10" />,
-    specs: [
-      { label: "Architecture", value: "Microservices sur Kubernetes" },
-      { label: "Base de données", value: "TimescaleDB + PostgreSQL" },
-      { label: "Débit", value: "10M+ événements/jour" },
-      { label: "Latence", value: "< 500 ms de bout en bout" },
-      { label: "SLA disponibilité", value: "99,9 %" },
+    name: "Pointage biométrique",
+    tagline: "Gestion des présences par empreinte digitale",
+    icon: <Fingerprint className="w-10 h-10" />,
+    description:
+      "Des systèmes de pointage par empreinte digitale pour gérer efficacement les présences et les horaires de travail des employés.",
+    points: [
+      "Sécuriser l'identification des employés",
+      "Éviter les fraudes liées au pointage",
+      "Générer automatiquement des rapports de présence",
+      "Faciliter la gestion des ressources humaines",
     ],
   },
   {
-    ...products[2],
-    icon: <Shield className="w-10 h-10" />,
-    specs: [
-      { label: "Protocoles", value: "LoRaWAN, NB-IoT, LTE-M" },
-      { label: "Satellite", value: "Iridium, Starlink ready" },
-      { label: "Bascule", value: "Multi-réseaux automatique" },
-      { label: "Portée", value: "Jusqu'à 15 km (LoRa)" },
-      { label: "Sécurité", value: "Chiffrement AES-256" },
+    name: "Pointage RFID",
+    tagline: "Pointage par carte ou badge",
+    icon: <CreditCard className="w-10 h-10" />,
+    description:
+      "Des solutions de pointage par carte ou badge RFID. Chaque employé pointe son arrivée et son départ en présentant sa carte devant un lecteur.",
+    points: [
+      "Enregistrer automatiquement les heures de travail",
+      "Suivre les présences en temps réel",
+      "Produire des rapports détaillés",
+      "Simplifier la gestion du personnel",
+    ],
+  },
+  {
+    name: "Sur mesure",
+    tagline: "Solutions technologiques personnalisées",
+    icon: <Wrench className="w-10 h-10" />,
+    description:
+      "Des solutions adaptées aux besoins spécifiques des entreprises et institutions: systèmes électroniques, objets connectés, plateformes numériques et outils de digitalisation.",
+    points: [
+      "Cadrage du besoin et architecture",
+      "Développement et tests",
+      "Déploiement et accompagnement",
+      "Évolutions et support",
     ],
   },
 ];
@@ -54,8 +71,8 @@ export default function ProductsPage() {
       <SectionWrapper>
         <SectionTitle
           overline="Produits"
-          title="Notre suite de produits"
-          subtitle="Des appareils edge aux plateformes cloud, notre suite intégrée couvre toute la chaîne de la donnée pour des déploiements IoT industriels."
+          title="Des produits concrets, conçus pour améliorer l'efficacité"
+          subtitle="TANGA GROUP développe des produits technologiques pour optimiser l'expérience utilisateur et la performance des organisations."
         />
       </SectionWrapper>
 
@@ -77,38 +94,26 @@ export default function ProductsPage() {
                 <p className="text-muted-foreground max-w-sm leading-relaxed mb-6">
                   {product.description}
                 </p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {product.features.map((f) => (
-                    <span
-                      key={f}
-                      className="inline-flex items-center gap-1.5 px-3 py-1 text-xs rounded-full bg-card border border-border"
-                    >
-                      <CheckCircle2 className="w-3 h-3 text-cyan" /> {f}
-                    </span>
-                  ))}
-                </div>
               </div>
 
-              {/* Specs */}
+              {/* What you get */}
               <div className="p-8 sm:p-12">
                 <h3 className="font-heading text-sm font-semibold uppercase tracking-wide text-cyan mb-6">
-                  Spécifications techniques
+                  Ce que vous obtenez
                 </h3>
-                <div className="space-y-4">
-                  {product.specs.map((spec) => (
-                    <div
-                      key={spec.label}
-                      className="flex items-center justify-between py-3 border-b border-border last:border-0"
+                <ul className="space-y-3">
+                  {product.points.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-3 text-sm text-muted-foreground"
                     >
-                      <span className="text-sm text-muted-foreground">
-                        {spec.label}
-                      </span>
-                      <span className="text-sm font-medium">{spec.value}</span>
-                    </div>
+                      <CheckCircle2 className="w-4 h-4 text-cyan shrink-0 mt-0.5" />
+                      <span>{point}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
                 <div className="mt-8">
-                  <CTAButton href="/contact">Demander la fiche technique</CTAButton>
+                  <CTAButton href="/contact">Demander une démo</CTAButton>
                 </div>
               </div>
             </div>

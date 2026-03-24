@@ -69,9 +69,9 @@ export default function HeroSection() {
           className="mt-20 glass rounded-2xl p-6 sm:p-8 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8"
         >
           {[
-            { value: "50+", label: "Projets livrés" },
-            { value: "5K+", label: "Appareils déployés" },
-            { value: "8", label: "Pays" },
+            { value: "100+", label: "Projets livrés" },
+            { value: "85+", label: "Appareils déployés" },
+            { value: "3", label: "Pays" },
             { value: "99,5%", label: "Disponibilité système" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">

@@ -2,133 +2,143 @@ import { Metadata } from "next";
 import SectionWrapper from "@/components/SectionWrapper";
 import SectionTitle from "@/components/SectionTitle";
 import AnimatedCard from "@/components/AnimatedCard";
-import { blogPosts } from "@/lib/constants";
-import { Clock, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { ExternalLink, Mic, Smartphone, Tv } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Actualités",
   description:
-    "Analyses sur l'IoT, les systèmes embarqués et la création d'entreprises deep-tech en Afrique. Lisez les derniers articles de TANGA GROUP.",
+    "Retrouvez les passages média et les prises de parole de TANGA GROUP sur YouTube, à la télévision et sur TikTok.",
 };
 
-const allPosts = [
-  ...blogPosts,
+const mediaPosts = [
   {
-    title: "Concevoir des PCB pour les conditions climatiques africaines",
-    excerpt:
-      "Points clés sur les matériaux, vernis et la gestion thermique des PCB en environnements très chauds et humides.",
-    date: "2026-02-20",
-    readTime: "8 min de lecture",
-    category: "Matériel",
+    title: "Passage à RFI Challenge App Afrique",
+    description:
+      "Une intervention autour de l'entreprise, de son parcours et de la vision portée par TANGA GROUP.",
+    platform: "YouTube",
+    format: "Interview média",
+    href: "https://www.youtube.com/watch?v=5q9xTpdeYj8&t=12s",
+    cta: "Voir sur YouTube",
+    icon: <Mic className="h-6 w-6" />,
   },
   {
-    title: "L'essor de LoRaWAN dans l'agriculture africaine",
-    excerpt:
-      "Comment les réseaux LPWAN permettent l'agriculture de précision à travers le continent.",
-    date: "2026-02-15",
-    readTime: "5 min de lecture",
-    category: "IoT",
+    title: "Émission télé sur Samuze BF1",
+    description:
+      "Un passage télévisé présentant l'activité de l'entreprise et son positionnement dans l'innovation.",
+    platform: "YouTube",
+    format: "Télévision",
+    href: "https://www.youtube.com/watch?v=FG_NSs-FBE0",
+    cta: "Regarder l'émission",
+    icon: <Tv className="h-6 w-6" />,
   },
   {
-    title: "Construire une entreprise deep-tech à Douala",
-    excerpt:
-      "Leçons tirées de la création d'une entreprise de systèmes embarqués dans la capitale économique du Cameroun.",
-    date: "2026-02-08",
-    readTime: "10 min de lecture",
-    category: "Startup",
+    title: "Vidéo TikTok sur l'entreprise",
+    description:
+      "Une prise de parole directe pour présenter TANGA GROUP, son ambition et ce que nous construisons.",
+    platform: "TikTok",
+    format: "Prise de parole",
+    href: "https://vt.tiktok.com/ZSuvbDM1Y/",
+    cta: "Voir sur TikTok",
+    icon: <Smartphone className="h-6 w-6" />,
   },
 ];
 
 export default function InsightsPage() {
+  const featuredPost = mediaPosts[0];
+  const otherPosts = mediaPosts.slice(1);
+
   return (
     <div className="pt-24">
       <SectionWrapper>
         <SectionTitle
-          overline="Blog"
-          title="Analyses & perspectives"
-          subtitle="Approfondissements sur la technologie, l'ingénierie et la construction pour le marché africain."
+          overline="Actualités"
+          title="On parle de TANGA GROUP"
+          subtitle="Retrouvez ici nos passages média, nos interviews et nos prises de parole autour de l'entreprise et de ses innovations."
         />
       </SectionWrapper>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        {/* Featured post */}
+      <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <AnimatedCard className="mb-12 !p-0 overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            <div className="h-64 lg:h-auto bg-gradient-to-br from-cyan/10 to-purple/10 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-border">
-              <span className="font-heading text-4xl font-bold text-gradient opacity-30">
-                À LA UNE
-              </span>
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="flex min-h-72 items-center justify-center border-b border-border bg-gradient-to-br from-cyan/10 to-purple/10 lg:border-b-0 lg:border-r">
+              <div className="text-center">
+                <span className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-background/70 text-cyan">
+                  {featuredPost.icon}
+                </span>
+                <p className="font-heading text-4xl font-bold text-gradient opacity-90">
+                  À LA UNE
+                </p>
+              </div>
             </div>
+
             <div className="p-8 sm:p-10">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="px-3 py-1 text-xs font-semibold rounded-full bg-cyan/10 text-cyan">
-                  {allPosts[0].category}
+              <div className="mb-4 flex flex-wrap items-center gap-3">
+                <span className="rounded-full bg-cyan/10 px-3 py-1 text-xs font-semibold text-cyan">
+                  {featuredPost.platform}
                 </span>
-                <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                  <Clock className="w-3 h-3" />
-                  {allPosts[0].readTime}
+                <span className="rounded-full bg-purple/10 px-3 py-1 text-xs font-semibold text-purple">
+                  {featuredPost.format}
                 </span>
               </div>
-              <h2 className="font-heading text-2xl font-bold mb-4">
-                {allPosts[0].title}
+
+              <h2 className="mb-4 font-heading text-2xl font-bold">
+                {featuredPost.title}
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                {allPosts[0].excerpt}
+
+              <p className="mb-8 leading-relaxed text-muted-foreground">
+                {featuredPost.description}
               </p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-muted-foreground">
-                  {new Date(allPosts[0].date).toLocaleDateString("fr-FR", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </span>
-                <Link
-                  href="#"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-cyan hover:text-foreground transition-colors"
-                >
-                  Lire l&apos;article <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
+
+              <a
+                href={featuredPost.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-cyan transition-colors hover:text-foreground"
+              >
+                {featuredPost.cta}
+                <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </AnimatedCard>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {allPosts.slice(1).map((post, index) => (
-            <AnimatedCard key={post.title} delay={index * 0.05} className="flex flex-col">
-              <div className="flex items-center justify-between mb-4">
-                <span className="px-3 py-1 text-xs font-semibold rounded-full bg-purple/10 text-purple">
-                  {post.category}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {otherPosts.map((post, index) => (
+            <AnimatedCard
+              key={post.title}
+              delay={index * 0.05}
+              className="flex flex-col"
+            >
+              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan/10 text-cyan">
+                {post.icon}
+              </div>
+
+              <div className="mb-4 flex flex-wrap items-center gap-3">
+                <span className="rounded-full bg-cyan/10 px-3 py-1 text-xs font-semibold text-cyan">
+                  {post.platform}
                 </span>
-                <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                  <Clock className="w-3 h-3" />
-                  {post.readTime}
+                <span className="rounded-full bg-purple/10 px-3 py-1 text-xs font-semibold text-purple">
+                  {post.format}
                 </span>
               </div>
-              <h3 className="font-heading text-lg font-semibold mb-3 leading-snug">
+
+              <h3 className="mb-3 font-heading text-xl font-semibold leading-snug">
                 {post.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
-                {post.excerpt}
+
+              <p className="mb-6 flex-1 text-sm leading-relaxed text-muted-foreground">
+                {post.description}
               </p>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-muted-foreground">
-                  {new Date(post.date).toLocaleDateString("fr-FR", {
-                    month: "short",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </span>
-                <Link
-                  href="#"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-cyan hover:text-foreground transition-colors"
-                >
-                  Lire <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+
+              <a
+                href={post.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-cyan transition-colors hover:text-foreground"
+              >
+                {post.cta}
+                <ExternalLink className="h-4 w-4" />
+              </a>
             </AnimatedCard>
           ))}
         </div>
