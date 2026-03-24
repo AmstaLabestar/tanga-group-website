@@ -4,6 +4,7 @@ import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
 import { siteConfig } from "@/lib/constants";
 import Script from "next/script";
+import BackToTopButton from "@/components/BackToTopButton";
 
 export const metadata: Metadata = {
   title: {
@@ -11,6 +12,11 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  icons: {
+    icon: "/logo.jpg",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
   keywords: [
     "embedded systems",
     "IoT",
@@ -65,6 +71,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-background text-foreground overflow-x-hidden">
         <Header />
         <main className="relative">{children}</main>
+        <BackToTopButton />
         <Footer />
       </body>
     </html>
