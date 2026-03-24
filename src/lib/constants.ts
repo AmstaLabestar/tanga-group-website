@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "TANGA GROUP",
   description:
     "Nous concevons des systèmes intelligents qui transforment les opérations des entreprises africaines. IoT, embarqué, data et plateformes digitales pour connecter le terrain à la décision.",
-  url: "https://tangagroup.com",
-  ogImage: "/og-image.png",
+  url: "https://www.tangagroup.com",
+  ogImage: "/logo.jpg",
   links: {
     facebook: "https://www.facebook.com/Tangagroupbf?mibextid=ZbWKwL",
     instagram: "https://www.instagram.com/tanga.group",

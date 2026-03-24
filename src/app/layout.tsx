@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Header from "@/layouts/Header";
-import Footer from "@/layouts/Footer";
-import { siteConfig } from "@/lib/constants";
 import Script from "next/script";
 import BackToTopButton from "@/components/BackToTopButton";
+import Footer from "@/layouts/Footer";
+import Header from "@/layouts/Header";
+import { siteConfig } from "@/lib/constants";
+import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — L'ingénierie de la prochaine génération technologique en Afrique`,
+    default: `${siteConfig.name} - L'ingenierie de la prochaine generation technologique en Afrique`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/logo.jpg",
     shortcut: "/logo.jpg",
@@ -38,12 +42,19 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        alt: `${siteConfig.name} logo`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
     creator: "@tangagroup",
+    images: [siteConfig.ogImage],
   },
   robots: {
     index: true,
@@ -68,7 +79,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <body className="min-h-screen overflow-x-hidden bg-background text-foreground">
         <Header />
         <main className="relative">{children}</main>
         <BackToTopButton />
