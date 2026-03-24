@@ -3,49 +3,56 @@ import SectionWrapper from "@/components/SectionWrapper";
 import SectionTitle from "@/components/SectionTitle";
 import AnimatedCard from "@/components/AnimatedCard";
 import CTAButton from "@/components/CTAButton";
-import { deployments } from "@/lib/constants";
-import { MapPin, Activity, Filter } from "lucide-react";
+import { CheckCircle2, Monitor, Wifi, Cpu, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Projets",
   description:
-    "Explorez le portfolio de TANGA GROUP: des déploiements IoT et systèmes embarqués concrets à travers l'Afrique.",
+    "Les projets TANGA GROUP : digitalisation, IoT, solutions électroniques intelligentes et transformation numérique.",
 };
 
-const additionalProjects = [
+const axes = [
   {
-    title: "Monitoring de réseau électrique (smart grid)",
-    location: "Côte d'Ivoire",
-    metric: "350 substations",
-    description: "Suivi en temps réel des performances du réseau pour l'opérateur national d'électricité.",
-    category: "Énergie",
+    icon: <Monitor className="h-6 w-6" />,
+    title: "Digitalisation des organisations",
+    description:
+      "Solutions pour automatiser les processus, améliorer la gestion interne et renforcer l'efficacité opérationnelle.",
   },
   {
-    title: "Monitoring de chaîne du froid",
-    location: "Ghana",
-    metric: "99.2% compliance",
-    description: "Suivi de température pour la distribution pharmaceutique sur 120 sites.",
-    category: "Santé",
+    icon: <Wifi className="h-6 w-6" />,
+    title: "Internet des objets (IoT)",
+    description:
+      "Objets connectés collectant et transmettant des données en temps réel pour faciliter la prise de décision.",
   },
   {
-    title: "Réseau de capteurs environnementaux",
-    location: "RDC",
-    metric: "800 sensors",
-    description: "Collecte de données environnementales et qualité de l'air dans des zones minières.",
-    category: "Environnement",
+    icon: <Cpu className="h-6 w-6" />,
+    title: "Solutions électroniques intelligentes",
+    description:
+      "Systèmes électroniques innovants pour améliorer l'expérience utilisateur et l'efficacité des services.",
   },
   {
-    title: "Pilote de comptage intelligent",
-    location: "Tanzanie",
-    metric: "10,000 meters",
-    description: "Infrastructure de comptage avancée pour les opérateurs d'eau et d'électricité.",
-    category: "Services publics",
+    icon: <Sparkles className="h-6 w-6" />,
+    title: "Transformation numérique",
+    description:
+      "Accompagnement des entreprises et institutions dans l'adoption de technologies modernes pour moderniser leurs activités.",
   },
 ];
 
-const allProjects = [
-  ...deployments.map((d) => ({ ...d, category: "Infrastructure" })),
-  ...additionalProjects,
+const methodology = [
+  {
+    step: "Analyse du besoin",
+    detail: "Comprendre le terrain, les contraintes et les objectifs.",
+  },
+  { step: "Conception", detail: "Choix techniques, architecture et maquettage." },
+  {
+    step: "Développement",
+    detail: "Hardware, software et intégrations selon le périmètre.",
+  },
+  { step: "Tests", detail: "Validation fonctionnelle, robustesse et qualité." },
+  {
+    step: "Déploiement",
+    detail: "Mise en production, formation et accompagnement.",
+  },
 ];
 
 export default function ProjectsPage() {
@@ -53,57 +60,48 @@ export default function ProjectsPage() {
     <div className="pt-24">
       <SectionWrapper>
         <SectionTitle
-          overline="Portfolio"
-          title="Nos projets"
-          subtitle="Des déploiements terrain qui répondent à des défis critiques à travers le continent africain."
+          overline="Projets"
+          title="Des projets technologiques orientés résultats"
+          subtitle="Chez TANGA GROUP, chaque projet part d'un problème concret et se transforme en une solution fiable, adaptée au contexte et au terrain."
         />
       </SectionWrapper>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        {/* Filter bar */}
-        <div className="flex items-center gap-3 mb-10 overflow-x-auto pb-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Filter className="w-4 h-4" />
-            Filtrer:
-          </div>
-          {["Tous", "Infrastructure", "Énergie", "Santé", "Environnement", "Services publics"].map(
-            (filter) => (
-              <button
-                key={filter}
-                className="px-4 py-2 text-xs font-medium rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-cyan/30 transition-colors whitespace-nowrap first:bg-cyan/10 first:text-cyan first:border-cyan/30"
-              >
-                {filter}
-              </button>
-            )
-          )}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {allProjects.map((project, index) => (
-            <AnimatedCard key={project.title} delay={index * 0.05}>
-              <div className="flex items-center justify-between mb-4">
-                <span className="px-3 py-1 text-xs font-semibold rounded-full bg-purple/10 text-purple">
-                  {project.category}
-                </span>
+      <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="mb-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {axes.map((axis, index) => (
+            <AnimatedCard key={axis.title} delay={index * 0.08}>
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-cyan/10 text-cyan">
+                {axis.icon}
               </div>
-              <h3 className="font-heading text-lg font-semibold mb-2">
-                {project.title}
+              <h3 className="mb-2 font-heading text-base font-semibold">
+                {axis.title}
               </h3>
-              <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
-                <span className="flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5 text-cyan" />
-                  {project.location}
-                </span>
-                <span className="flex items-center gap-1">
-                  <Activity className="w-3.5 h-3.5 text-cyan" />
-                  {project.metric}
-                </span>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {project.description}
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {axis.description}
               </p>
             </AnimatedCard>
           ))}
+        </div>
+
+        <div className="glass rounded-2xl border border-border p-8 sm:p-10">
+          <h3 className="mb-6 font-heading text-xl font-bold">
+            Une méthodologie rigoureuse
+          </h3>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
+            {methodology.map((m) => (
+              <div key={m.step} className="flex items-start gap-3">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-cyan/10 text-cyan">
+                  <CheckCircle2 className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-foreground">{m.step}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    {m.detail}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-16 text-center">

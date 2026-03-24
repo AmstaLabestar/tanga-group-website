@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 import CTAButton from "@/components/CTAButton";
-import { openPositions } from "@/lib/constants";
-import { MapPin, Briefcase } from "lucide-react";
+//import { openPositions } from "@/lib/constants";
+//import { MapPin, Briefcase } from "lucide-react";
 
 export default function CareersCTASection() {
   return (
@@ -33,7 +33,7 @@ export default function CareersCTASection() {
               </div>
 
               <div className="space-y-3">
-                {openPositions.map((position, index) => (
+                {/* {openPositions.map((position, index) => (
                   <motion.div
                     key={position.title}
                     initial={{ opacity: 0, x: 20 }}
@@ -59,7 +59,7 @@ export default function CareersCTASection() {
                       </span>
                     </div>
                   </motion.div>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>

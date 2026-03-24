@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
 import { siteConfig } from "@/lib/constants";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -50,7 +51,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className="dark">
+    <html lang="fr" className="dark" suppressHydrationWarning>
+      <head>
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark');}else{document.documentElement.classList.add('dark');}}catch(e){}})();",
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-background text-foreground overflow-x-hidden">
         <Header />
         <main className="relative">{children}</main>

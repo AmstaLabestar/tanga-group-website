@@ -26,7 +26,7 @@ export default function LanguageSwitcher() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center justify-center w-9 h-9 rounded-md text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan/30">
+      <DropdownMenuTrigger className="flex items-center justify-center w-9 h-9 rounded-md text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan/30">
         <Globe className="w-5 h-5" />
         <span className="sr-only">Changer de langue</span>
       </DropdownMenuTrigger>

@@ -31,7 +31,7 @@ const contactInfo = [
     icon: <Phone className="w-5 h-5" />,
     label: "Téléphone",
     value: "+226 XX XX XX XX",
-    href: "tel:+226 ",
+    href: "tel:+22667402030",
   },
   {
     icon: <MapPin className="w-5 h-5" />,

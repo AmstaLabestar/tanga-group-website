@@ -5,8 +5,6 @@ import TechArchitectureSection from "@/sections/TechArchitectureSection";
 import DeploymentsSection from "@/sections/DeploymentsSection";
 import VisionSection from "@/sections/VisionSection";
 import PartnershipCTASection from "@/sections/PartnershipCTASection";
-import InsightsSection from "@/sections/InsightsSection";
-import CareersCTASection from "@/sections/CareersCTASection";
 
 export default function HomePage() {
   return (
@@ -18,8 +16,6 @@ export default function HomePage() {
       <DeploymentsSection />
       <VisionSection />
       <PartnershipCTASection />
-      <InsightsSection />
-      <CareersCTASection />
     </>
   );
 }

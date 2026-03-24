@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import ThemeToggle from "@/components/ThemeToggle";
+import Image from "next/image";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,8 +31,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-brand flex items-center justify-center font-bold text-background text-sm">
-            TG
+          <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-card border border-border overflow-hidden">
+            <Image
+              src="/logo.jpg"
+              alt="Logo TANGA GROUP"
+              fill
+              sizes="40px"
+              className="object-contain p-1.5"
+              priority
+            />
           </div>
           <span className="font-heading font-bold text-lg tracking-tight text-foreground">
             {siteConfig.name}
@@ -47,7 +56,7 @@ export default function Header() {
                 "px-3 py-2 text-sm font-medium rounded-lg transition-colors",
                 pathname === link.href
                   ? "text-cyan bg-cyan/10"
-                  : "text-muted-foreground hover:text-foreground hover:bg-white/5"
+                  : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
               )}
             >
               {link.label}
@@ -55,25 +64,30 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:flex items-center gap-3">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-gradient-brand text-background hover:opacity-90 transition-opacity"
-          >
-            Demander une démo
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+        {/* Actions */}
+        <div className="flex items-center gap-2 lg:gap-3">
+          <ThemeToggle />
 
-        {/* Mobile Toggle */}
-        <button
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          className="lg:hidden p-2 text-foreground"
-          aria-label="Ouvrir le menu"
-        >
-          {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+          {/* Desktop CTA */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full bg-gradient-brand text-white hover:opacity-90 transition-opacity"
+            >
+              Demander une démo
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Mobile Toggle */}
+          <button
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            className="lg:hidden p-2 text-foreground"
+            aria-label={isMobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          >
+            {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -95,7 +109,7 @@ export default function Header() {
                     "px-4 py-3 text-sm font-medium rounded-lg transition-colors",
                     pathname === link.href
                       ? "text-cyan bg-cyan/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-white/5"
+                      : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
                   )}
                 >
                   {link.label}
@@ -104,7 +118,7 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileOpen(false)}
-                className="mt-4 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-full bg-gradient-brand text-background"
+                className="mt-4 inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold rounded-full bg-gradient-brand text-white"
               >
                 Demander une démo
                 <ArrowRight className="w-4 h-4" />

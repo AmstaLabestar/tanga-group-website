@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00E5FF" stop-opacity="0.22"/>
+      <stop offset="0.55" stop-color="#00E5FF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0.16"/>
+    </linearGradient>
+    <filter id="blur" x="-50" y="-50" width="1300" height="900" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Circuit-like background illustration; intentionally subtle for overlay use -->
+  <g filter="url(#blur)" stroke="url(#g)" stroke-width="2" stroke-linecap="round">
+    <path d="M86 180H380c38 0 70 32 70 70v70c0 38 31 70 70 70h160c38 0 70 31 70 70v86" />
+    <path d="M120 520h280c34 0 62-28 62-62V350c0-34 28-62 62-62h106" />
+    <path d="M540 622h200c42 0 76-34 76-76V260c0-42 34-76 76-76h250" />
+    <path d="M210 260v120c0 28 22 50 50 50h120" />
+    <path d="M880 470h180c36 0 66 30 66 66v120" />
+    <path d="M980 310v90c0 26-21 48-48 48h-80" />
+  </g>
+
+  <g fill="url(#g)">
+    <circle cx="86" cy="180" r="10"/>
+    <circle cx="120" cy="520" r="10"/>
+    <circle cx="210" cy="260" r="10"/>
+    <circle cx="450" cy="320" r="10"/>
+    <circle cx="632" cy="288" r="10"/>
+    <circle cx="540" cy="622" r="10"/>
+    <circle cx="820" cy="630" r="10"/>
+    <circle cx="980" cy="310" r="10"/>
+    <circle cx="880" cy="470" r="10"/>
+    <circle cx="1142" cy="184" r="10"/>
+  </g>
+
+  <!-- A soft highlight blob to give depth -->
+  <path
+    d="M980 80c120 40 190 120 160 210s-150 116-260 76-170-140-140-230 120-96 240-56Z"
+    fill="#00E5FF"
+    fill-opacity="0.06"
+  />
+</svg>

@@ -45,13 +45,13 @@ const allPositions = [
   },
   {
     title: "Designer produit",
-    location: "Douala, Cameroon",
+    location: "Ouagadougou, Burkina Faso",
     type: "Temps plein",
     department: "Design",
   },
   {
     title: "Ingénieur firmware",
-    location: "Douala, Cameroon",
+    location: "Ouagadougou, Burkina Faso ",
     type: "Temps plein",
     department: "Matériel",
   },

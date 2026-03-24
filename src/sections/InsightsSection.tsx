@@ -1,68 +1,63 @@
 "use client";
 
-import SectionWrapper from "@/components/SectionWrapper";
-import SectionTitle from "@/components/SectionTitle";
-import AnimatedCard from "@/components/AnimatedCard";
-import { blogPosts } from "@/lib/constants";
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function InsightsSection() {
   return (
-    <SectionWrapper id="insights">
-      <SectionTitle
-        overline="Actualités"
-        title="Derniers articles"
-        subtitle="Analyses sur la technologie, l'innovation et la construction pour le marché africain."
-      />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {blogPosts.map((post, index) => (
-          <AnimatedCard key={post.title} delay={index * 0.1} className="flex flex-col">
-            {/* Category + reading time header */}
-            <div className="flex items-center justify-between mb-4">
-              <span className="px-3 py-1 text-xs font-semibold rounded-full bg-purple/10 text-purple">
-                {post.category}
-              </span>
-              <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                <Clock className="w-3 h-3" />
-                {post.readTime}
-              </div>
-            </div>
+    <section id="insights" className="relative overflow-hidden py-20 sm:py-28">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan/[0.02] to-transparent" />
+        <motion.div
+          aria-hidden="true"
+          className="absolute -top-8 right-[-18%] h-[520px] w-[760px] opacity-70"
+          style={{
+            backgroundImage: "url(/insights-circuit.svg)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            backgroundPosition: "right top",
+          }}
+          initial={{ x: 0 }}
+          animate={{ x: [0, 120] }}
+          transition={{
+            duration: 14,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: "mirror",
+          }}
+        />
+      </div>
 
-            <h3 className="font-heading text-lg font-semibold mb-3 leading-snug">
-              {post.title}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
-              {post.excerpt}
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 grid grid-cols-1 items-end gap-10 sm:mb-14 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <div className="inline-flex items-center gap-2 rounded-full bg-cyan/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan">
+              Actualités
+              <span className="text-cyan/40">|</span>
+              <span className="font-semibold normal-case tracking-normal text-muted-foreground">
+                Médias, interviews et prises de parole
+              </span>
+            </div>
+            <h2 className="mt-5 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+              Découvrez nos dernières apparitions publiques
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Retrouvez les vidéos, interviews et contenus où TANGA GROUP
+              présente son parcours, ses ambitions et ses innovations.
             </p>
+          </div>
 
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-muted-foreground">
-                {new Date(post.date).toLocaleDateString("fr-FR", {
-                  month: "short",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-              </span>
-              <Link
-                href="/insights"
-                className="inline-flex items-center gap-1 text-sm font-semibold text-cyan hover:text-foreground transition-colors"
-              >
-                Lire <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-          </AnimatedCard>
-        ))}
+          <div className="flex lg:col-span-5 lg:justify-end">
+            <Link
+              href="/insights"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card/30 px-6 py-3 text-sm font-semibold transition-colors hover:border-cyan/30 hover:bg-white/5"
+            >
+              Voir toutes les actualités <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
       </div>
-
-      <div className="mt-12 text-center">
-        <Link
-          href="/insights"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
-        >
-          Voir tous les articles <ArrowRight className="w-4 h-4" />
-        </Link>
-      </div>
-    </SectionWrapper>
+    </section>
   );
 }
