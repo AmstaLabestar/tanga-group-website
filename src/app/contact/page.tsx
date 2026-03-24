@@ -37,7 +37,7 @@ const contactInfo = [
     icon: <MapPin className="w-5 h-5" />,
     label: "Bureau",
     value: "Ouagadougou, Burkina Faso",
-    href: "#",
+    href: "https://www.google.com/maps/place/12%C2%B017'33.3%22N+1%C2%B027'43.2%22W/@12.2925701,-1.4645854,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.2925701!4d-1.4620105?hl=fr&entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
@@ -95,14 +95,19 @@ export default function ContactPage() {
             ))}
 
             {/* Map placeholder */}
-            <div className="h-48 rounded-xl glass-card flex items-center justify-center">
+            <a
+              href="https://www.google.com/maps/place/12%C2%B017'33.3%22N+1%C2%B027'43.2%22W/@12.2925701,-1.4645854,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.2925701!4d-1.4620105?hl=fr&entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-48 rounded-xl glass-card flex items-center justify-center"
+            >
               <div className="text-center">
                 <MapPin className="w-8 h-8 text-cyan/30 mx-auto mb-2" />
                 <p className="text-xs text-muted-foreground">
                   Balkuy, Ouagadougou, Burkina Faso
                 </p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Form */}
