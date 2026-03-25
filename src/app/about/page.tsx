@@ -1,39 +1,39 @@
 import { Metadata } from "next";
-import SectionWrapper from "@/components/SectionWrapper";
-import SectionTitle from "@/components/SectionTitle";
 import AnimatedCard from "@/components/AnimatedCard";
-import { Target, Eye, Heart, Zap } from "lucide-react";
+import SectionTitle from "@/components/SectionTitle";
+import SectionWrapper from "@/components/SectionWrapper";
+import { Eye, Heart, Target, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "À propos",
+  title: "A propos de TANGA GROUP, entreprise technologie au Burkina Faso",
   description:
-    "Découvrez TANGA GROUP : notre mission, nos valeurs et notre parcours dans la conception de technologies électroniques et numériques en Afrique.",
+    "Decouvrez TANGA GROUP, entreprise technologique basee a Ouagadougou, specialisee en IoT, systemes embarques, plateformes numeriques et innovation appliquee au Burkina Faso.",
 };
 
 const values = [
   {
-    icon: <Target className="w-6 h-6" />,
-    title: "Ingénierie d'abord",
+    icon: <Target className="h-6 w-6" />,
+    title: "Ingenierie d'abord",
     description:
-      "Rigueur, fiabilité terrain et exigences industrielles, du prototype à l'exploitation.",
+      "Rigueur, fiabilite terrain et exigences industrielles, du prototype a l'exploitation.",
   },
   {
-    icon: <Zap className="w-6 h-6" />,
+    icon: <Zap className="h-6 w-6" />,
     title: "Innovation utile",
     description:
-      "Nous concevons des solutions adaptées aux besoins réels : IoT, systèmes de pointage et plateformes numériques.",
+      "Nous concevons des solutions adaptees aux besoins reels : IoT, systemes de pointage et plateformes numeriques.",
   },
   {
-    icon: <Eye className="w-6 h-6" />,
-    title: "Transparence & accompagnement",
+    icon: <Eye className="h-6 w-6" />,
+    title: "Transparence et accompagnement",
     description:
-      "Une communication claire, un pilotage simple et un support fiable, du cadrage à la mise en production.",
+      "Une communication claire, un pilotage simple et un support fiable, du cadrage a la mise en production.",
   },
   {
-    icon: <Heart className="w-6 h-6" />,
-    title: "Fierté africaine",
+    icon: <Heart className="h-6 w-6" />,
+    title: "Fierte africaine",
     description:
-      "Construire localement une technologie de classe mondiale, pensée pour les réalités du terrain.",
+      "Construire localement une technologie de classe mondiale, pensee pour les realites du terrain.",
   },
 ];
 
@@ -41,27 +41,27 @@ const milestones = [
   {
     year: "2022",
     event:
-      "Naissance de TANGA GROUP avec une mission claire : créer des technologies capables de résoudre des problèmes réels en Afrique.",
+      "Naissance de TANGA GROUP avec une mission claire : creer des technologies capables de resoudre des problemes reels en Afrique.",
   },
   {
     year: "2023",
     event:
-      "Premiers projets, premières collaborations et mise en place d'un pôle recherche & développement dédié à l'innovation électronique et logicielle.",
+      "Premiers projets, premieres collaborations et mise en place d'un pole recherche et developpement dedie a l'innovation electronique et logicielle.",
   },
   {
     year: "2024",
     event:
-      "L'entreprise développe plusieurs solutions technologiques et renforce son expertise en électronique, IoT et plateformes numériques.",
+      "L'entreprise developpe plusieurs solutions technologiques et renforce son expertise en electronique, IoT et plateformes numeriques.",
   },
   {
     year: "2025",
     event:
-      "Lancement de Feelback, une solution intelligente permettant aux entreprises de mesurer instantanément la satisfaction de leurs clients.",
+      "Lancement de Feelback, une solution intelligente permettant aux entreprises de mesurer instantanement la satisfaction de leurs clients.",
   },
   {
     year: "2026",
     event:
-      "TANGA GROUP poursuit son ambition : construire des technologies africaines capables de transformer les entreprises, les institutions et les services publics.",
+      "TANGA GROUP poursuit son ambition : construire au Burkina Faso des technologies capables de transformer les entreprises, les institutions et les services publics.",
   },
 ];
 
@@ -74,14 +74,15 @@ export default function AboutPage() {
             Notre histoire
           </span>
           <h1 className="mb-6 font-heading text-4xl font-bold tracking-tight sm:text-5xl">
-            Construire la technologie{" "}
-            <span className="text-gradient">depuis l&apos;Afrique, pour le monde</span>
+            Entreprise technologique a{" "}
+            <span className="text-gradient">Ouagadougou</span>
           </h1>
           <p className="text-lg leading-relaxed text-muted-foreground">
-            TANGA GROUP conçoit du matériel électronique et des solutions numériques
-            pour des organisations exigeantes. Nous intervenons sur des systèmes IoT,
-            des solutions de pointage et des plateformes de pilotage, avec une
-            obsession : la fiabilité sur le terrain.
+            TANGA GROUP conçoit des solutions IoT, du matériel électronique et des
+            plateformes numériques pour les organisations exigeantes du Burkina Faso.
+            Nous intervenons sur des systèmes connectés, des solutions de pointage
+            et des outils de pilotage avec une obsession : la fiabilité sur le
+            terrain.
           </p>
         </div>
       </SectionWrapper>

@@ -1,71 +1,71 @@
 import { Metadata } from "next";
-import SectionWrapper from "@/components/SectionWrapper";
-import SectionTitle from "@/components/SectionTitle";
 import AnimatedCard from "@/components/AnimatedCard";
 import CTAButton from "@/components/CTAButton";
-import { Cpu, Wifi, Monitor, Sparkles, CheckCircle2 } from "lucide-react";
+import SectionTitle from "@/components/SectionTitle";
+import SectionWrapper from "@/components/SectionWrapper";
+import { CheckCircle2, Cpu, Monitor, Sparkles, Wifi } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Solutions",
+  title: "Solutions IoT et transformation digitale au Burkina Faso",
   description:
-    "Des solutions technologiques pour digitaliser les organisations: IoT, électronique embarquée, systèmes de pointage et plateformes numériques.",
+    "TANGA GROUP accompagne les entreprises du Burkina Faso avec des solutions IoT, des systemes embarques, des outils de digitalisation et des plateformes numeriques concues pour le terrain.",
 };
 
 const solutions = [
   {
-    icon: <Monitor className="w-8 h-8" />,
+    icon: <Monitor className="h-8 w-8" />,
     title: "Digitalisation des organisations",
     id: "digitalisation",
     description:
-      "Automatisez vos processus, améliorez la gestion interne et gagnez en efficacité opérationnelle grâce à des outils numériques conçus sur mesure.",
+      "Nous aidons les entreprises et institutions du Burkina Faso a digitaliser leurs processus, structurer leur gestion interne et mieux piloter leurs operations.",
     capabilities: [
       "Audit et cadrage des besoins",
       "Applications web et tableaux de bord",
       "Outils de gestion et de reporting",
-      "Intégrations et automatisations",
-      "Accompagnement au déploiement",
+      "Integrations et automatisations",
+      "Accompagnement au deploiement",
     ],
   },
   {
-    icon: <Wifi className="w-8 h-8" />,
+    icon: <Wifi className="h-8 w-8" />,
     title: "Internet des objets (IoT)",
     id: "iot",
     description:
-      "Concevez des objets connectés capables de collecter et transmettre des données en temps réel pour faciliter la prise de décision.",
+      "Nous concevons des solutions IoT au Burkina Faso pour collecter, transmettre et exploiter les donnees terrain en temps reel.",
     capabilities: [
       "Capteurs, passerelles et collecte terrain",
-      "Connectivité et transmission sécurisée",
-      "Plateforme de supervision en temps réel",
+      "Connectivite et transmission securisee",
+      "Plateforme de supervision en temps reel",
       "Alertes, indicateurs et historiques",
-      "Maintenance et évolutions",
+      "Maintenance et evolutions",
     ],
   },
   {
-    icon: <Cpu className="w-8 h-8" />,
-    title: "Solutions électroniques intelligentes",
+    icon: <Cpu className="h-8 w-8" />,
+    title: "Systemes embarques intelligents",
     id: "electronique",
     description:
-      "Développement de systèmes électroniques innovants pour améliorer l&apos;expérience utilisateur et l&apos;efficacité des services.",
+      "Nous developpons des systemes electroniques et embarques pour automatiser les services, fiabiliser les operations et connecter les equipements.",
     capabilities: [
       "Conception de cartes et PCB",
       "Prototypage et tests",
-      "Intégration capteurs et périphériques",
+      "Integration capteurs et peripheriques",
       "Firmware et communication",
       "Industrialisation et documentation",
     ],
   },
   {
-    icon: <Sparkles className="w-8 h-8" />,
-    title: "Transformation numérique",
+    icon: <Sparkles className="h-8 w-8" />,
+    title: "Transformation numerique",
     id: "transformation",
     description:
-      "Accompagnement des entreprises et institutions dans l&apos;adoption de technologies modernes pour moderniser leurs activités.",
+      "Nous accompagnons la transformation digitale des organisations au Burkina Faso avec une approche pragmatique, progressive et orientee resultats.",
     capabilities: [
-      "Stratégie et feuille de route",
-      "MVP, itérations et validation",
+      "Strategie et feuille de route",
+      "MVP, iterations et validation",
       "Formation et conduite du changement",
-      "Sécurité, conformité et bonnes pratiques",
-      "Support et amélioration continue",
+      "Securite, conformite et bonnes pratiques",
+      "Support et amelioration continue",
     ],
   },
 ];
@@ -73,30 +73,31 @@ const solutions = [
 export default function SolutionsPage() {
   return (
     <div className="pt-24">
-      {/* Hero */}
       <SectionWrapper>
         <SectionTitle
           overline="Solutions"
-          title="Des solutions conçues pour le terrain"
-          subtitle="Notre approche: partir d&apos;un besoin concret, concevoir une solution adaptée, puis accompagner le déploiement et l&apos;adoption."
+          title="Solutions IoT et digitales concues pour le Burkina Faso"
+          subtitle="Notre approche consiste a partir d'un besoin concret, concevoir une solution adaptee au terrain, puis accompagner son deploiement et son adoption."
         />
       </SectionWrapper>
 
-      {/* Solution cards */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
         <div className="space-y-12">
           {solutions.map((solution, index) => (
-            <AnimatedCard key={solution.title} delay={index * 0.1} className="!p-0 overflow-hidden" >
-              <div id={solution.id} className="grid grid-cols-1 lg:grid-cols-5 gap-0">
-                {/* Left: info */}
-                <div className="lg:col-span-3 p-8 sm:p-10">
-                  <div className="w-14 h-14 rounded-xl bg-cyan/10 flex items-center justify-center text-cyan mb-6">
+            <AnimatedCard
+              key={solution.title}
+              delay={index * 0.1}
+              className="!overflow-hidden !p-0"
+            >
+              <div id={solution.id} className="grid grid-cols-1 gap-0 lg:grid-cols-5">
+                <div className="p-8 sm:p-10 lg:col-span-3">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-cyan/10 text-cyan">
                     {solution.icon}
                   </div>
-                  <h2 className="font-heading text-2xl sm:text-3xl font-bold mb-4">
+                  <h2 className="mb-4 font-heading text-2xl font-bold sm:text-3xl">
                     {solution.title}
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-8">
+                  <p className="mb-8 leading-relaxed text-muted-foreground">
                     {solution.description}
                   </p>
                   <CTAButton href="/contact" variant="secondary">
@@ -104,10 +105,9 @@ export default function SolutionsPage() {
                   </CTAButton>
                 </div>
 
-                {/* Right: capabilities */}
-                <div className="lg:col-span-2 bg-card/50 border-t lg:border-t-0 lg:border-l border-border p-8 sm:p-10">
-                  <h3 className="font-heading text-sm font-semibold uppercase tracking-wide text-cyan mb-6">
-                    Compétences
+                <div className="border-border bg-card/50 p-8 sm:p-10 lg:col-span-2 lg:border-l lg:border-t-0 border-t">
+                  <h3 className="mb-6 font-heading text-sm font-semibold uppercase tracking-wide text-cyan">
+                    Competences
                   </h3>
                   <ul className="space-y-3">
                     {solution.capabilities.map((cap) => (
@@ -115,7 +115,7 @@ export default function SolutionsPage() {
                         key={cap}
                         className="flex items-start gap-3 text-sm text-muted-foreground"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-cyan shrink-0 mt-0.5" />
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-cyan" />
                         {cap}
                       </li>
                     ))}

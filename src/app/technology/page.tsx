@@ -1,31 +1,39 @@
 import { Metadata } from "next";
-import SectionWrapper from "@/components/SectionWrapper";
-import SectionTitle from "@/components/SectionTitle";
 import AnimatedCard from "@/components/AnimatedCard";
+import SectionTitle from "@/components/SectionTitle";
+import SectionWrapper from "@/components/SectionWrapper";
 import { techPipeline } from "@/lib/constants";
-import { Cpu, Radio, Cloud, BarChart3, Brain, Server, Sparkles } from "lucide-react";
+import {
+  BarChart3,
+  Brain,
+  Cloud,
+  Cpu,
+  Radio,
+  Server,
+  Sparkles,
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Technologie",
+  title: "Systemes embarques et technologies IoT au Burkina Faso",
   description:
-    "Les technologies maîtrisées par TANGA GROUP: électronique embarquée, IoT, plateformes cloud, analyse de données et solutions intégrées.",
+    "Decouvrez les technologies maitrisees par TANGA GROUP au Burkina Faso : systemes embarques, IoT, cloud, analyse de donnees et plateformes connectees pour les organisations.",
 };
 
 const iconMap: Record<string, React.ReactNode> = {
-  Cpu: <Cpu className="w-7 h-7" />,
-  Radio: <Radio className="w-7 h-7" />,
-  Cloud: <Cloud className="w-7 h-7" />,
-  BarChart3: <BarChart3 className="w-7 h-7" />,
-  Brain: <Brain className="w-7 h-7" />,
+  Cpu: <Cpu className="h-7 w-7" />,
+  Radio: <Radio className="h-7 w-7" />,
+  Cloud: <Cloud className="h-7 w-7" />,
+  BarChart3: <BarChart3 className="h-7 w-7" />,
+  Brain: <Brain className="h-7 w-7" />,
 };
 
 const techStack = [
   {
-    category: "Électronique embarquée",
-    icon: <Cpu className="w-6 h-6" />,
+    category: "Systemes embarques",
+    icon: <Cpu className="h-6 w-6" />,
     technologies: [
       "Conception de circuits et cartes PCB",
-      "Intégration capteurs et périphériques",
+      "Integration capteurs et peripheriques",
       "Prototypage, tests et validation",
       "Firmware et communication",
       "Industrialisation produit",
@@ -33,46 +41,46 @@ const techStack = [
   },
   {
     category: "Internet des objets (IoT)",
-    icon: <Radio className="w-6 h-6" />,
+    icon: <Radio className="h-6 w-6" />,
     technologies: [
-      "Collecte et transmission temps réel",
-      "Objets connectés et passerelles",
+      "Collecte et transmission temps reel",
+      "Objets connectes et passerelles",
       "Supervision et alertes",
-      "Sécurisation des échanges",
-      "Maintenance et évolutivité",
+      "Securisation des echanges",
+      "Maintenance et evolutivite",
     ],
   },
   {
     category: "Plateformes cloud",
-    icon: <Server className="w-6 h-6" />,
+    icon: <Server className="h-6 w-6" />,
     technologies: [
       "Applications web et outils de gestion",
-      "Centralisation et analyse des données",
+      "Centralisation et analyse des donnees",
       "Tableaux de bord et reporting",
-      "Accès, rôles et traçabilité",
-      "APIs et intégrations",
+      "Acces, roles et tracabilite",
+      "APIs et integrations",
     ],
   },
   {
-    category: "Analyse de données",
-    icon: <Brain className="w-6 h-6" />,
+    category: "Analyse de donnees",
+    icon: <Brain className="h-6 w-6" />,
     technologies: [
       "Exploitation et visualisation",
       "Indicateurs et tendances",
-      "Aide à la décision",
-      "Qualité et fiabilité des données",
+      "Aide a la decision",
+      "Qualite et fiabilite des donnees",
       "Rapports et alertes",
     ],
   },
   {
-    category: "Solutions intégrées",
-    icon: <Sparkles className="w-6 h-6" />,
+    category: "Solutions integrees",
+    icon: <Sparkles className="h-6 w-6" />,
     technologies: [
       "Hardware + software + UX",
-      "Approche orientée usage",
-      "Déploiement et adoption",
+      "Approche orientee usage",
+      "Deploiement et adoption",
       "Documentation et formation",
-      "Support et amélioration continue",
+      "Support et amelioration continue",
     ],
   },
 ];
@@ -83,39 +91,37 @@ export default function TechnologyPage() {
       <SectionWrapper>
         <SectionTitle
           overline="Technologie"
-          title="Une expertise complète, du hardware au logiciel"
-          subtitle="L&apos;innovation chez TANGA GROUP repose sur la maîtrise de technologies complémentaires pour livrer des solutions fiables et performantes."
+          title="Une expertise complete en IoT et systemes embarques"
+          subtitle="TANGA GROUP maitrise des technologies complementaires pour concevoir au Burkina Faso des solutions fiables, connectees et performantes."
         />
       </SectionWrapper>
 
-      {/* Pipeline */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <h3 className="font-heading text-xl font-bold text-center mb-10">
+      <div className="mx-auto mb-20 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h3 className="mb-10 text-center font-heading text-xl font-bold">
           Architecture de bout en bout
         </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
           {techPipeline.map((step, index) => (
             <AnimatedCard key={step.step} delay={index * 0.1} className="text-center">
-              <div className="w-14 h-14 mx-auto rounded-xl bg-cyan/10 flex items-center justify-center text-cyan mb-3">
+              <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-xl bg-cyan/10 text-cyan">
                 {iconMap[step.icon]}
               </div>
-              <h4 className="font-heading text-sm font-bold mb-1">{step.step}</h4>
+              <h4 className="mb-1 font-heading text-sm font-bold">{step.step}</h4>
               <p className="text-xs text-muted-foreground">{step.description}</p>
             </AnimatedCard>
           ))}
         </div>
       </div>
 
-      {/* Tech stack grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <h3 className="font-heading text-xl font-bold text-center mb-10">
+      <div className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+        <h3 className="mb-10 text-center font-heading text-xl font-bold">
           Nos piliers technologiques
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {techStack.map((group, index) => (
             <AnimatedCard key={group.category} delay={index * 0.08}>
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center text-cyan">
+              <div className="mb-5 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cyan/10 text-cyan">
                   {group.icon}
                 </div>
                 <h4 className="font-heading text-base font-semibold">
@@ -126,9 +132,9 @@ export default function TechnologyPage() {
                 {group.technologies.map((tech) => (
                   <li
                     key={tech}
-                    className="text-sm text-muted-foreground flex items-center gap-2"
+                    className="flex items-center gap-2 text-sm text-muted-foreground"
                   >
-                    <div className="w-1 h-1 rounded-full bg-cyan" />
+                    <div className="h-1 w-1 rounded-full bg-cyan" />
                     {tech}
                   </li>
                 ))}
