@@ -58,7 +58,7 @@ export default function Footer() {
               Nous concevons des systèmes embarqués, des solutions IoT et des
               plateformes numériques à fort impact.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
               {Object.entries(siteConfig.links).map(([name, href]) => (
                 <a
                   key={name}
