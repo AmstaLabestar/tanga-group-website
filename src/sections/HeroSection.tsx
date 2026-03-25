@@ -5,23 +5,21 @@ import CTAButton from "@/components/CTAButton";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background grid + gradient */}
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       <div className="absolute inset-0 grid-pattern" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
-      {/* Animated glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan/5 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple/5 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div className="absolute left-1/4 top-1/4 h-96 w-96 animate-pulse rounded-full bg-cyan/5 blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 h-96 w-96 animate-pulse rounded-full bg-purple/5 blur-3xl delay-1000" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan bg-cyan/10 rounded-full mb-6">
-            L&apos;innovation deep-tech depuis l&apos;Afrique
+          <span className="mb-6 inline-block rounded-full bg-cyan/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan">
+            L'innovation deep-tech depuis l'Afrique
           </span>
         </motion.div>
 
@@ -29,56 +27,55 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-          className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]"
+          className="font-heading text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
         >
-          L&apos;ingénierie de la{" "}
-          <span className="text-gradient">Prochaine génération</span>{" "}
-          technologique africaine
+          Entreprise IoT au{" "}
+          <span className="text-gradient">Burkina Faso</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+          className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl"
         >
-          Nous concevons des systèmes embarqués, des solutions IoT et des
-          plateformes numériques pour aider les organisations à collecter des
-          données et améliorer leurs décisions.
+          TANGA GROUP conçoit des systèmes embarqués, des solutions IoT et des
+          plateformes numériques à Ouagadougou pour aider les entreprises et
+          organisations du Burkina Faso à collecter leurs données et améliorer
+          leurs décisions.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <CTAButton href="/solutions" size="lg">
             Explorer nos solutions
           </CTAButton>
           <CTAButton href="/contact" variant="secondary" size="lg">
-            Demander une démo
+            Demander une demo
           </CTAButton>
         </motion.div>
 
-        {/* Stats bar */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="mt-20 glass rounded-2xl p-6 sm:p-8 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8"
+          className="mt-20 grid grid-cols-2 gap-6 rounded-2xl p-6 sm:grid-cols-4 sm:gap-8 sm:p-8 glass"
         >
           {[
-            { value: "100+", label: "Projets livrés" },
-            { value: "85+", label: "Appareils déployés" },
+            { value: "100+", label: "Projets livres" },
+            { value: "85+", label: "Appareils deployes" },
             { value: "3", label: "Pays" },
-            { value: "99,5%", label: "Disponibilité système" },
+            { value: "99,5%", label: "Disponibilite systeme" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="font-heading text-2xl sm:text-3xl font-bold text-gradient">
+              <div className="font-heading text-2xl font-bold text-gradient sm:text-3xl">
                 {stat.value}
               </div>
-              <div className="text-xs sm:text-sm text-muted-foreground mt-1">
+              <div className="mt-1 text-xs text-muted-foreground sm:text-sm">
                 {stat.label}
               </div>
             </div>
@@ -86,7 +83,6 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
